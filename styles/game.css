@@ -1,0 +1,17 @@
+.game-btn {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 100%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+}
+
+.tip-btn {
+    position: fixed;
+    top: 20%;
+    left: 3%;
+}
