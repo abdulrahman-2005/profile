@@ -2,18 +2,16 @@ let PAGE = document.body.innerHTML;
 
 const messagePanel = document.getElementById("message-panel");
 
-panelState = "closed";
 const panel = (content = "") => {
 	messagePanel.classList.toggle("close-panel");
 	messagePanel.innerHTML = `<button id="close-panel" onclick="panel()">x</button></br>${content}`;
-	panelState = panelState === "closed" ? "opened" : "closed";
 };
 
 function ideabutton() {
 	panel(`
     <div>
     The idea of the page style is from a better developer
-    <div class="inner">Mr, Codeing In Public
+    <div class="inner">Mr, Coding In Public
     <a target=_blank class="inner2" href="https://www.codinginpublic.dev">Visit His website</a></div>
     </div>
     
@@ -31,18 +29,16 @@ function tipbutton() {
     `);
 }
 
-
-//create a function that displays a random text from list a
-//and after 2 seconds, it will return the page as it was
-
-
+function clb() {
+	return majorData.currentLanguage === "english" ? "Ar" : "En";
+}
 
 function fetchRandomText() {
-	let jokeList = majorData.currentLanguage
+	let jokeList = majorData.currentLanguage;
 	return jokeData[jokeList][Math.floor(Math.random() * jokeList.length)];
 }
-//create a function that takes seconds as an argument and freezes the page for that amount of seconds
 
+let translationsMapper;
 function translatePage() {
 	translationsMapper = [
 		[
@@ -115,7 +111,10 @@ function translatePage() {
 		["#LNKLINKEDIN", majorData.links.linkedin],
 		["#LNKTWITTER", majorData.links.twitter],
 		["#LNKGMAIL", majorData.links.gmail],
+		["#CHANGELANGBUTTON", clb()],
+		["#PROFILEPICSOURCE", majorData.profilePicSource],
 	];
+
 	let page = PAGE;
 	for (mapper of translationsMapper) {
 		page = page.replace(mapper[0], mapper[1]);
@@ -141,3 +140,5 @@ function redButton() {
 		translatePage();
 	}, 1300);
 }
+
+changeLanguage();

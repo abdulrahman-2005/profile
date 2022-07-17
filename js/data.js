@@ -9,7 +9,8 @@ const majorData = {
 		twitter: "https://twitter.com/@Abdulra42082285",
         gmail: "abuazmy.gg@gmail.com"
 	},
-	currentLanguage: "english",
+	currentLanguage: "arabic",
+	profilePicSource: "pro.jpg",
 	translations: {
 		english: {
 			links: {
@@ -40,7 +41,7 @@ const majorData = {
 				linkedin: "لينكد إن",
 				reddit: "ريديت",
 				twitter: "تويتر",
-                gmail: "جمايل"
+                gmail: "جيميل"
 			},
 			descriptions: {
 				about: "عن عبدو",
@@ -124,60 +125,6 @@ const jokeData = {
 		"الموضوع صار اوفر اوي",
 	],
 };
-
-
-let translationsMapper = [
-	[
-		"#SERVICES",
-		majorData.translations[majorData.currentLanguage].headerButtons
-			.services,
-	],
-	[
-		"#PROJECTS",
-		majorData.translations[majorData.currentLanguage].headerButtons
-			.projects,
-	],
-	[
-		"#HIRE",
-		majorData.translations[majorData.currentLanguage].headerButtons.hire,
-	],
-	[
-		"#CONTACT",
-		majorData.translations[majorData.currentLanguage].headerButtons.contact,
-	],
-	[
-		"#MYPIC",
-		majorData.translations[majorData.currentLanguage].descriptions
-			.profilePic,
-	],
-	[
-		"#ABOUT1",
-		majorData.translations[majorData.currentLanguage].descriptions.about1,
-	],
-	[
-		"#ABOUT2",
-		majorData.translations[majorData.currentLanguage].descriptions.about2,
-	],
-	["#GITHUB", majorData.translations[majorData.currentLanguage].links.github],
-	[
-		"#FACEBOOK",
-		majorData.translations[majorData.currentLanguage].links.facebook,
-	],
-	["#REDDIT", majorData.translations[majorData.currentLanguage].links.reddit],
-	[
-		"#LINKEDIN",
-		majorData.translations[majorData.currentLanguage].links.linkedin,
-	],
-	[
-		"#TWITTER",
-		majorData.translations[majorData.currentLanguage].links.twitter,
-	],
-	["#GITHUBLNK", majorData.links.github],
-	["#FACEBOOKLNK", majorData.links.facebook],
-	["#REDDITLNK", majorData.links.reddit],
-	["#LINKEDINLNK", majorData.links.linkedin],
-	["#TWITTERLNK", majorData.links.twitter],
-];
 
 const createStyler = (stylerName) => {
 	if (!styleData.createdStylers.includes(stylerName)) {

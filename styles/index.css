@@ -353,6 +353,7 @@ main {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+	z-index: 100;
 }
 
 #message-panel #close-panel {
@@ -404,7 +405,7 @@ main {
 	}
 	
 	.show-card {
-		width: 90vw;
+		width: 80vw;
 		z-index: 10;
 	}
 
@@ -417,6 +418,10 @@ main {
 		font-size: 1.1rem;
 		font-weight: bold;
 		background-color: transparent;
+	}
+	.tip-button {
+		left: 1% !important;
+		top: 30%;
 	}
 }
 
