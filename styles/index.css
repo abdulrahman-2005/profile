@@ -400,8 +400,11 @@ main {
 }
 
 @media screen and (max-width: 800px) {
+	* {
+		font-size: 1rem !important;
+	}
 	header * {
-		font-size: 1.3rem;
+		font-size: 1.3rem !important;
 	}
 	
 	.show-card {
@@ -418,10 +421,6 @@ main {
 		font-size: 1.1rem;
 		font-weight: bold;
 		background-color: transparent;
-	}
-	.tip-button {
-		left: 1% !important;
-		top: 30%;
 	}
 }
 
