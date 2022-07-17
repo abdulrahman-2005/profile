@@ -409,6 +409,7 @@ main {
 	
 	.show-card {
 		width: 80vw;
+		height: 70vh;
 		z-index: 10;
 	}
 
