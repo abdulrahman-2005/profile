@@ -279,6 +279,7 @@
 		height: calc(95% - var(--header-size));
 	}
 	.show-card * {
+		font-size: 1.2 rem !important;
 		padding: 1vw !important;
 		border-radius: 10px !important;
 	}
@@ -301,8 +302,8 @@
 		width: fit-content !important;
 	}
 	.show-card .profile-pic img {
-		height: 30vw !important;
-		width: 30vw !important;
+		height: 40vw !important;
+		width: 40vw !important;
 		border-radius: 100% !important;
 	}
 	.show-card .container .profile {
@@ -317,5 +318,10 @@
 	}
 	.show-card .container .profile .profile-desc {
 		flex-direction: column;
+	}
+	#jokeMessagePlace {
+		border-radius: 10px;
+		padding: 1vw;
+		font-size: 1.5rem;
 	}
 }
