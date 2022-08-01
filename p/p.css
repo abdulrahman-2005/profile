@@ -57,3 +57,11 @@ nav {
 .money:hover {
 	color: lightgreen
 }
+
+.flexy-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: w;
+}
