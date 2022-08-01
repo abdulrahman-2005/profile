@@ -12,7 +12,9 @@
 </head>
 
 <body>
-	<button id="getIn">#GETIN</button>
+	<a href="./p">
+		<button id="getIn">#GETIN</button>
+	</a>
 	<div id="container" class="flexy-center">
 		<main class="flexy-center dir-col">
 			<div id="about" class="show-card">
@@ -62,7 +64,10 @@
 	<button onclick="changeLanguage()">#CHANGELANGBUTTON</button>
 	<!-- <button onclick="ideabutton()" class="idea-right-btn game-btn">?!</button> -->
 	<script src="./js/index.js"></script>
-	<audio src="introo.mp3" autoplay></audio>
+	<audio src="introo.mp3" id="audio" autoplay></audio>
+	<script>
+		document.getElementById("audio").play();
+	</script>
 </body>
 
 </html>
