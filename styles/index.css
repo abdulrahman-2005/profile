@@ -275,8 +275,8 @@
 	}
 	
 	.show-card {
-		width: 95vw;
-		height: calc(95vh - var(--header-size));
+		width: 95%;
+		height: calc(95% - var(--header-size));
 	}
 	.show-card * {
 		padding: 1vw !important;
@@ -293,6 +293,10 @@
 		flex-direction: column;
 	}
 	.show-card .profile-pic {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 		height: fit-content !important;
 		width: fit-content !important;
 	}
