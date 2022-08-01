@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The code man - pages</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="p.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li style="border: 2px solid var(--primary); border-radius: 12px,"><a href="../." role="button"><strong>The
+                        Code Man</strong></a></li>
+        </ul>
+        <ul>
+            <li>
+                <button onclick="changeTheme()" id="changeThemeButton"></button>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <article style="background-color: var(--primary); color: var(--primary-inverse)">
+            <h1>Buy Me Some Coffee ☕☕</h1>
+        </article>
+        <main class="grid">
+            <article>
+                <h1>One Cup Please</h1>
+                <h1 style="font-size: 500%;">☕</h1>
+                <h4>with no sugar
+                </h4>
+                <button class="money" onclick="payWithPaypal(this, 1)">5$</button>
+            </article>
+            <article>
+                <h1>Double</h1>
+                <h1 style="font-size: 500%;">☕☕</h1>
+                <h4>with diet sugar
+                </h4>
+                <button class="money" onclick="payWithPaypal(this,2)">10$</button>
+            </article>
+            <article>
+                <h1>Month Worth</h1>
+                <h1 style="font-size: 700%;">🛢🛢</h1>
+                <h4>I'll freakout
+                </h4>
+                <button class="money" onclick="payWithPaypal(this, 3)">50$</button>
+            </article>
+        </main>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script src="./p.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+	--primary: #7d1bd8;
+	--primary-hover: #300061;
+	--primary-focus: rgba(74, 7, 105, 0.125);
+	--primary-inverse: #fff;
+}
+
+nav {
+	padding: 0vw 4vw 0vw 4vw;
+}
+
+#message {
+    height: 200px;
+    resize: none;
+}
+
+#changeThemeButton {
+	border-radius: 20px;
+}

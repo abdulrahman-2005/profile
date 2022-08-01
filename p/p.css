@@ -1,0 +1,59 @@
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+	--primary: #7d1bd8;
+	--primary-hover: #300061;
+	--primary-focus: rgba(74, 7, 105, 0.125);
+	--primary-inverse: #fff;
+}
+
+nav {
+	padding: 0vw 4vw 0vw 4vw;
+}
+
+#message {
+    height: 200px;
+    resize: none;
+}
+
+#changeThemeButton {
+	border-radius: 20px;
+}
+
+.grid {
+	padding: 2vw;
+}
+
+.grid article {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+#smart-button-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#smart-button-container * {
+	width: 100%;
+}
+
+.money {
+	background-color: green;
+	border: green;
+	width: 100%
+}
+
+.money:hover {
+	color: lightgreen
+}

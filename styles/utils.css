@@ -1,13 +1,17 @@
 :root {
 	--header-size: 100px;
 	--header-bg-color: transparent;
-	--header-fc-color: white;
+	--header-fc-color: black;
     --page-direction: ltr;
 	--current-direction: left;
     --borders: transparent;
 	--font-family: monospace;
-	--opposite-direction: right;
+
+	--border-color: red;
+	--border-type: solid;
 }
+
+
 
 *,
 ::after,
@@ -78,40 +82,8 @@ body {
 	width: 100% !important;
 	overflow: hidden;
 	overflow-y: auto;
-    background: radial-gradient(85.74% 244.28% at 98.91% 115.51%,rgb(94, 215, 255) 40%,rgb(170, 0, 255) 90%);
+    background: rgb(31, 3, 45);
     overflow: hidden;
-}
-
-header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: var(--header-size);
-	width: 100% !important;
-	background: var(--header-bg-color);
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-
-header button {
-    height: 90%;
-    width: fit-content;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0 1vw 0 1vw;
-    border-radius: 20px;
-	background-color: rgb(24, 0, 67);
-    color: white;
-    padding: 1vw;
-}
-
-header button:hover {
-    animation: header-button-dance 5s ease-in;
 }
 
 main {

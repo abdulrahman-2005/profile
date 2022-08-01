@@ -1,5 +1,3 @@
-
-
 const majorData = {
 	links: {
 		facebook: "https://www.facebook.com/profile.php?id=100078502215093",
@@ -24,15 +22,10 @@ const majorData = {
 			descriptions: {
 				about: "about abdo",
 				about1: "Hi, This is abdulrahman",
-				about2: "a developer readt to learn",
+				about2: "A Developer Looking Forward",
 				profilePic: "That's just me ⤣⤣",
 			},
-			headerButtons: {
-				services: "services",
-				contact: "contact",
-				hire: "hire",
-				projects: "projects",
-			},
+			getin: "GET IN"
 		},
 		arabic: {
 			links: {
@@ -46,15 +39,10 @@ const majorData = {
 			descriptions: {
 				about: "عن عبدو",
 				about1: "مرحبا، انا عبدالرحمن",
-				about2: "مطور شغوف بالتعلم",
+				about2: "مطور ومصمم وطالب ثانوي عام 😂",
 				profilePic: "دي صورتي ⤣⤣",
 			},
-			headerButtons: {
-				services: "خدماتي",
-				contact: "تواصل معي",
-				hire: "عمل",
-				projects: "مشاريعي",
-			},
+			getin: "استكشف"
 		},
 	},
 };

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The code man - pages</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="p.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li style="border: 2px solid var(--primary); border-radius: 12px"><strong>The Code Man</strong></li>
+        </ul>
+        <ul>
+            <li><a href="../." role="button">HomePage</a></li>
+            <li>
+                <button onclick="changeTheme(this)" id="changeThemeButton"></button>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <article style="background-color: var(--primary); color: var(--primary-inverse)">
+            <h1>Discover more of - <kbd>Abdulrahman Azmy</kbd></h1>
+            <h4>abuazmy.gg@gmail.com</h4>
+        </article>
+        <main class="grid">
+            <article>
+                <h1 data-tooltip="Available For Work">
+                    <font color="green">$$</font> HIRE ME <font color="green">$$</font>
+                </h1>
+                <a href="./timeline.hire" role="button" style="background-color: green; border: green;">GO>></a>
+            </article>
+            <article>
+                <h1 data-tooltip="See How I Developed">TIMELINE</h1>
+                <a href="./timeline.htm" role="button">GO>></a>
+            </article>
+            <article>
+                <h1 data-tooltip="Just Support Me">
+                    <font color="green">$$</font> TIP <font color="green">$$</font>
+                </h1>
+                <a href="./tip.htm" role="button" style="background-color: green; border: green;">GO>></a>
+            </article>
+        </main>
+    </div>
+    <script src="./p.js"></script>
+</body>
+
+</html>

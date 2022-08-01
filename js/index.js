@@ -1,35 +1,5 @@
 let PAGE = document.body.innerHTML;
 
-const messagePanel = document.getElementById("message-panel");
-
-const panel = (content = "") => {
-	messagePanel.classList.toggle("close-panel");
-	messagePanel.innerHTML = `<button id="close-panel" onclick="panel()">x</button></br>${content}`;
-};
-
-function ideabutton() {
-	panel(`
-    <div>
-    The idea of the page style is from a better developer
-    <div class="inner">Mr, Coding In Public
-    <a target=_blank class="inner2" href="https://www.codinginpublic.dev">Visit His website</a></div>
-    </div>
-    
-    
-    </br>
-    All rights reserved © 2022 Copyright Abdulrahman Azmy
-    `);
-}
-
-function tipbutton() {
-	panel(`
-    <div>
-    Look For The <p class="inner"></p>
-    </div>
-    `);
-}
-
-
 function fetchRandomText() {
 	let jokeList = majorData.currentLanguage;
 	return jokeData[jokeList][Math.floor(Math.random() * jokeList.length)];
@@ -38,26 +8,7 @@ function fetchRandomText() {
 let translationsMapper;
 function translatePage() {
 	translationsMapper = [
-		[
-			"#SERVICES",
-			majorData.translations[majorData.currentLanguage].headerButtons
-				.services,
-		],
-		[
-			"#PROJECTS",
-			majorData.translations[majorData.currentLanguage].headerButtons
-				.projects,
-		],
-		[
-			"#HIRE",
-			majorData.translations[majorData.currentLanguage].headerButtons
-				.hire,
-		],
-		[
-			"#CONTACT",
-			majorData.translations[majorData.currentLanguage].headerButtons
-				.contact,
-		],
+		["#GETIN", majorData.translations[majorData.currentLanguage].getin],
 		[
 			"#ABOUT",
 			majorData.translations[majorData.currentLanguage].descriptions
@@ -108,7 +59,10 @@ function translatePage() {
 		["#LNKLINKEDIN", majorData.links.linkedin],
 		["#LNKTWITTER", majorData.links.twitter],
 		["#LNKGMAIL", majorData.links.gmail],
-		["#CHANGELANGBUTTON", majorData.currentLanguage === "english" ? "Ar" : "En"],
+		[
+			"#CHANGELANGBUTTON",
+			majorData.currentLanguage === "english" ? "Ar" : "En",
+		],
 		["#PROFILEPICSOURCE", majorData.profilePicSource],
 	];
 
@@ -139,3 +93,22 @@ function redButton() {
 }
 
 changeLanguage();
+
+let colors = [
+	"red",
+	"blue",
+	"green",
+	"yellow",
+	"orange",
+	"purple",
+	"pink",
+	"black",
+	"white",
+];
+const flashStyler = createStyler("flash-styler");
+function flash() {
+	let color = colors[Math.floor(Math.random() * colors.length)];
+	flashStyler.innerHTML = `:root {--border-color: ${color};}`;
+}
+
+setInterval(flash, 700);
