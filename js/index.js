@@ -29,9 +29,6 @@ function tipbutton() {
     `);
 }
 
-function clb() {
-	return majorData.currentLanguage === "english" ? "Ar" : "En";
-}
 
 function fetchRandomText() {
 	let jokeList = majorData.currentLanguage;
@@ -111,7 +108,7 @@ function translatePage() {
 		["#LNKLINKEDIN", majorData.links.linkedin],
 		["#LNKTWITTER", majorData.links.twitter],
 		["#LNKGMAIL", majorData.links.gmail],
-		["#CHANGELANGBUTTON", clb()],
+		["#CHANGELANGBUTTON", majorData.currentLanguage === "english" ? "Ar" : "En"],
 		["#PROFILEPICSOURCE", majorData.profilePicSource],
 	];
 

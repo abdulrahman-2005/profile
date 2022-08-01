@@ -1,0 +1,123 @@
+:root {
+	--header-size: 100px;
+	--header-bg-color: transparent;
+	--header-fc-color: white;
+    --page-direction: ltr;
+	--current-direction: left;
+    --borders: transparent;
+	--font-family: monospace;
+	--opposite-direction: right;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	direction: var(--page-direction) !important;
+	text-align: var(--current-direction) !important;
+	font-family: var(--font-family);
+}
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+.flexy-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.dir-col {
+	flex-direction: column !important;
+}
+
+.facebook:hover {
+	background-color: rgb(66 103 178) !important;
+}
+
+.twitter:hover {
+	background-color: rgb(29 161 242)!important;
+}
+
+.linkedin:hover {
+	background-color: rgb( 10 102 194  )!important;
+}
+
+.reddit:hover {
+	background-color: rgb( 255, 69, 0 )!important;
+}
+
+.github:hover {
+	background-color: rgb(26, 27, 27)!important;
+}
+
+.gmail:hover {
+	background-color:rgb(255, 4, 0) !important;
+}
+
+body {
+    overflow: hidden;
+}
+
+#container {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	overflow-y: auto;
+    background: radial-gradient(85.74% 244.28% at 98.91% 115.51%,rgb(94, 215, 255) 40%,rgb(170, 0, 255) 90%);
+    overflow: hidden;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: var(--header-size);
+	width: 100vw;
+	background: var(--header-bg-color);
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+header button {
+    height: 90%;
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 1vw 0 1vw;
+    border-radius: 20px;
+	background-color: rgb(24, 0, 67);
+    color: white;
+    padding: 1vw;
+}
+
+header button:hover {
+    animation: header-button-dance 5s ease-in;
+}
+
+main {
+	position: absolute;
+	left: 0;
+	top: var(--header-size);
+	height: calc(100vh - var(--header-size));
+	width: 100vw;
+	overflow: hidden;
+	overflow-y: auto;
+	background: transparent;
+}

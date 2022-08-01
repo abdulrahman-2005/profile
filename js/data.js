@@ -71,11 +71,10 @@ const styleData = {
         }
         `,
 		arabic: `
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap');
         :root {
             --page-direction: rtl;
             --current-direction: right;
-            --font-family: 'Noto Naskh Arabic', serif;
+            --font-family: monospace;
             --opposite-direction: left;
         }`,
 	},

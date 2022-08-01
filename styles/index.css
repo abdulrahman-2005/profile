@@ -1,126 +1,5 @@
-:root {
-	--header-size: 100px;
-	--header-bg-color: transparent;
-	--header-fc-color: white;
-    --page-direction: ltr;
-	--current-direction: left;
-    --borders: transparent;
-	--font-family: monospace;
-	--opposite-direction: right;
-}
+@import url(utils.css);
 
-*,
-::after,
-::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	direction: var(--page-direction) !important;
-	text-align: var(--current-direction) !important;
-	font-family: var(--font-family);
-}
-
-button {
-	border: none;
-	outline: none;
-	cursor: pointer;
-	user-select: none;
-}
-
-a {
-	text-decoration: none;
-	color: unset;
-}
-
-.flexy-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.dir-col {
-	flex-direction: column !important;
-}
-
-.facebook:hover {
-	background-color: rgb(66 103 178) !important;
-}
-
-.twitter:hover {
-	background-color: rgb(29 161 242)!important;
-}
-
-.linkedin:hover {
-	background-color: rgb( 10 102 194  )!important;
-}
-
-.reddit:hover {
-	background-color: rgb( 255, 69, 0 )!important;
-}
-
-.github:hover {
-	background-color: rgb(26, 27, 27)!important;
-}
-
-.gmail:hover {
-	background-color:rgb(255, 4, 0) !important;
-}
-
-body {
-    overflow: hidden;
-}
-
-#container {
-	height: 100vh;
-	width: 100vw;
-	overflow: hidden;
-	overflow-y: auto;
-    background: radial-gradient(85.74% 244.28% at 98.91% 115.51%,rgb(94, 215, 255) 40%,rgb(170, 0, 255) 90%);
-    overflow: hidden;
-}
-
-header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: var(--header-size);
-	width: 100vw;
-	background: var(--header-bg-color);
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-
-header button {
-    height: 90%;
-    width: fit-content;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0 1vw 0 1vw;
-    border-radius: 20px;
-	background-color: rgb(24, 0, 67);
-    color: white;
-    padding: 1vw;
-}
-
-header button:hover {
-    animation: header-button-dance 5s ease-in;
-}
-
-main {
-	position: absolute;
-	left: 0;
-	top: var(--header-size);
-	height: calc(100vh - var(--header-size));
-	width: 100vw;
-	overflow: hidden;
-	overflow-y: auto;
-	background: transparent;
-}
 
 .show-card {
 	height: fit-content;
@@ -135,10 +14,6 @@ main {
 	padding: 1vw;
 	height: fit-content !important;
 	user-select: none;
-}
-
-.show-card:hover {
-    animation: shake-little 5s ease-in-out;
 }
 
 .show-card .header {
@@ -189,8 +64,7 @@ main {
 }
 
 .show-card .container {
-	height: 85% !important;
-	width: 100% !important;
+	height: 85%;
 	background-color: transparent;
     border-radius: 10px;
 
@@ -202,15 +76,16 @@ main {
 }
 
 .show-card .container .profile-pic {
-	height: 95% !important;
-	width: 30% !important;
+	height: 95%;
+	width: 30%;
 	margin: 2%;
     border: 3px solid var(--borders);
 }
 
 .show-card .container .profile-pic img {
 	width: 100%;
-	height: 80%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .show-card .container .profile-pic p {
@@ -224,7 +99,7 @@ main {
 
 .show-card .container .profile {
 	padding: 0;
-	height: 90%;
+	height: 100%;
 	width: 65%;
 }
 
@@ -302,30 +177,6 @@ main {
 		transform: translate3d(4px, 0, 0) rotate(-5deg);
 	}
 }
-@keyframes shake-little {
-	20%,
-	80% {
-		transform: translate3d(-1px, 0, 0) rotate(1deg);
-        box-shadow: 20px -20px 0 0 rgb(58, 0, 250);
-	}
-	20%,
-	80% {
-		transform: translate3d(2px, 0, 0) rotate(-1deg);
-        box-shadow: -20px 20px 0 0 rgb(0, 0, 0);
-	}
-	30%,
-	50%,
-	70% {
-		transform: translate3d(-4px, 0, 0) rotate(1deg);
-        box-shadow: 20px -20px 0 0 rgb(255, 255, 255);
-	}
-	40%,
-	60% {
-		transform: translate3d(4px, 0, 0) rotate(-1deg);
-        box-shadow: -20px 20px 0 0 rgb(0, 0, 0);
-        
-	}
-}
 
 .idea-right-btn {
     position: fixed;
@@ -399,32 +250,6 @@ main {
     transform: translateX(120%);
 }
 
-@media screen and (max-width: 800px) {
-	* {
-		font-size: 1rem !important;
-	}
-	header * {
-		font-size: 1.3rem !important;
-	}
-	
-	.show-card {
-		width: 80vw;
-		height: 70vh;
-		z-index: 10;
-	}
-
-	.show-card .header .joke-btns-container .joke-btn {
-		height: 4vw !important;
-		width: 4vw !important;
-	}
-
-	.show-card .container .profile-pic p {
-		font-size: 1.1rem;
-		font-weight: bold;
-		background-color: transparent;
-	}
-}
-
 #jokeMessagePlace {
 	height: fit-content;
 	width: 50vw;
@@ -436,4 +261,54 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+
+@media screen and (max-width: 600px) {
+	.show-card * {
+		font-size: 1rem !important;
+		padding: 1vw !important;
+		border-radius: 10px !important;
+	}
+	header * {
+		height: fit-content !important;
+	}
+	
+	.show-card {
+		width: 95vw;
+		height: calc(95vh - var(--header-size));
+	}
+
+	.show-card .header .joke-btns-container .joke-btn {
+		height: 4vw !important;
+		width: 4vw;
+		border-radius: 100%;
+	}
+	.show-card .container {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+	.show-card .profile-pic {
+		height: fit-content !important;
+		width: fit-content !important;
+	}
+	.show-card .profile-pic img {
+		height: 30vw !important;
+		width: 30vw !important;
+		border-radius: 100% !important;
+	}
+	.show-card .container .profile {
+		width: 100%;
+	}
+	.show-card .container .profile * {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.show-card .container .profile .profile-desc {
+		flex-direction: column;
+	}
 }
