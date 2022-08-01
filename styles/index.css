@@ -264,21 +264,24 @@
 }
 
 
-@media screen and (max-width: 600px) {
-	.show-card * {
+@media screen and (max-width: 800px) {
+	* {
 		font-size: 1rem !important;
-		padding: 1vw !important;
-		border-radius: 10px !important;
 	}
 	header * {
 		height: fit-content !important;
+		padding: 1vw !important;
+		border-radius: 10px !important;
 	}
 	
 	.show-card {
 		width: 95vw;
 		height: calc(95vh - var(--header-size));
 	}
-
+	.show-card * {
+		padding: 1vw !important;
+		border-radius: 10px !important;
+	}
 	.show-card .header .joke-btns-container .joke-btn {
 		height: 4vw !important;
 		width: 4vw;
