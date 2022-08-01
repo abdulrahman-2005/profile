@@ -276,7 +276,7 @@
 	
 	.show-card {
 		width: 95%;
-		height: calc(95% - var(--header-size));
+		height: calc(99% - var(--header-size));
 	}
 	.show-card * {
 		font-size: 1.2 rem !important;
