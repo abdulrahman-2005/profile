@@ -18,3 +18,23 @@ nav {
 #changeThemeButton {
 	border-radius: 20px;
 }
+
+
+/* Pink Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--primary: #1e0048;
+		--primary-hover: #40009b;
+		--primary-focus: #6a00ff;
+		--primary-inverse: #fff;
+        --background-color: rgb(105, 0, 170);
+	}
+}
+[data-theme="dark"] {
+	--primary: #1e0048;
+	--primary-hover: #40009b;
+	--primary-focus: #6a00ff;
+	--primary-inverse: #fff;
+    --background-color: rgb(96, 0, 156);
+}

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me</title>
+    <title>تواصل معي - عبدالرحمن عزمي</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
     <link rel="stylesheet" href="p.css" />
 </head>
@@ -16,7 +16,7 @@
             <li style="border: 2px solid var(--primary); border-radius: 12px"><strong>The Code Man</strong></li>
         </ul>
         <ul>
-            <li><a href="../." role="button">🏠</a></li>
+            <a href="./index.html" role="button" class="secondary">◀ العودة</a>
             <li>
                 <button onclick="changeMode(this)" id="modeChange"></button>
             </li>
@@ -24,39 +24,41 @@
     </nav>
     <div>
         <article style="background-color: var(--primary); color: var(--primary-inverse)">
-            <h1>Contact - <kbd>Abdulrahman Azmy</kbd></h1>
+            <h1>راسل - <kbd>عبدالرحمن عزمي</kbd></h1>
             <h4>abuazmy.gg@gmail.com</h4>
         </article>
         <main class="container">
-            <form>
+            <form action="none">
                 <!-- Grid -->
                 <div class="grid">
                     <!-- Markup example 1: input is inside label -->
                     <label for="firstname">
-                        First name
-                        <input type="text" id="firstname" name="firstname" placeholder="First name" required />
+                        اسمك
+                        <input type="text" id="firstname" name="firstname" placeholder="الاسم الاول" required />
                     </label>
 
                     <label for="lastname">
-                        Last name
-                        <input type="text" id="lastname" name="lastname" placeholder="Last name" required />
+                        اسم العائلة
+                        <input type="text" id="lastname" name="lastname" placeholder="لقب العائلة" required />
                     </label>
                 </div>
 
                 <!-- Markup example 2: input is after label -->
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="Email address" required />
-                <small>We'll never share your email with anyone else.</small>
+                <label for="email">الايميل</label>
+                <input type="email" id="email" name="email" placeholder="عنوان الايميل" required />
+                <small>لن تتم مشاركة ايميلكم مع اي احد</small>
 
                 <label for="message"></label>
                 <textarea id="message" name="message"></textarea>
 
                 <!-- Button -->
-                <button type="submit">Send Message</button>
+                <button type="submit">أرسل (غير مفعل بعد)</button>
             </form>
         </main>
     </div>
     <script src="./p.js"></script>
+    <script src="../../js/index.js"></script>
+
 </body>
 
 </html>

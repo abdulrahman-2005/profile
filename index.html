@@ -1,73 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>The Code Man</title>
-
-	<link rel="stylesheet" href="./styles/index.css" />
-	<script src="./js/data.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/index.js"></script>
 </head>
 
 <body>
-	<a href="./p">
-		<button id="getIn">#GETIN</button>
-	</a>
-	<div id="container" class="flexy-center">
-		<main class="flexy-center dir-col">
-			<div id="about" class="show-card">
-				<div class="header">
-					<div class="joke-btns-container flexy-center">
-						<button onclick="redButton()" class="joke-btn red"></button>
-						<button class="joke-btn yellow"></button>
-						<button class="joke-btn green"></button>
-					</div>
-					<p class="about">#ABOUT</p>
-				</div>
-				<div class="container flexy-center">
-					<div class="profile-pic inner">
-						<img src="#PROFILEPICSOURCE" alt="my profile picture" />
-						<p>#MYPIC</p>
-					</div>
-					<div class="profile">
-						<div class="profile-desc inner">
-							<h1>#ABOUT1</h1>
-							<h2>#ABOUT2</h2>
-						</div>
-						<div class="profile-links inner">
-							<button class="profile-link github">
-								<a href="#LNKGITHUB" target="_blank">#GITHUB</a>
-							</button>
-							<button class="profile-link facebook" href="">
-								<a href="#LNKFACEBOOK" target="_blank">#FACEBOOK</a>
-							</button>
-							<button class="profile-link reddit" href="">
-								<a href="#LNKREDDIT" target="_blank">#REDDIT</a>
-							</button>
-							<button class="profile-link linkedin" href="">
-								<a href="#LNKLINKEDIN" target="_blank">#LINKEDIN</a>
-							</button>
-							<button class="profile-link twitter" href="">
-								<a href="#LNKTWITTER" target="_blank">#TWITTER</a>
-							</button>
-							<button class="profile-link gmail" href="">
-								<a href="#LNKGMAIL" target="_blank">#GMAIL</a>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-	</div>
-	<button onclick="changeLanguage()">#CHANGELANGBUTTON</button>
-	<!-- <button onclick="ideabutton()" class="idea-right-btn game-btn">?!</button> -->
-	<script src="./js/index.js"></script>
-	<audio src="introo.mp3" id="audio" autoplay></audio>
-	<script>
-		document.getElementById("audio").play();
-	</script>
+    <div id="container">
+        <article id="card">
+            <nav id="header">
+                <ul>
+                    <li>
+                        <strong role="button" class="outline" style="
+									cursor: unset;
+									padding: 1vw !important;
+									color: white;
+								">About Abdo</strong>
+                    </li>
+                    <li>
+                        <button class="utilButton" onclick="changeMode(this)" id="modeChange">
+                            ☀
+                        </button>
+                    </li>
+                    <li>
+                        <button class="utilButton" onclick="changeLanguage()" id="langChange">
+                            Ar
+                        </button>
+                    </li>
+                </ul>
+                <ul class="jokeButtonsContainer">
+                    <li>
+                        <button class="jokeButton" style="background: rgb(109, 255, 109)"></button>
+                    </li>
+                    <li>
+                        <button class="jokeButton" style="background: rgb(255, 255, 65)"></button>
+                    </li>
+                    <li>
+                        <button onclick="jokeMessage()" class="jokeButton" id="red"></button>
+                    </li>
+                </ul>
+            </nav>
+            <div id="body" class="grid">
+                <article id="profile-picture">
+                    <img src="pro.jpg" alt="" />
+                    <h5>That's me</h5>
+                </article>
+                <article id="profile-desc">
+                    <h2>Hi, This is Abdulrahman</h2>
+                    <a href="./p" role="button">Learn More...</a>
+                </article>
+                <article id="profile-links" class="grid">
+                    <a href="#" role="button" class="social-link twitter">Twitter</a>
+                    <a href="#" role="button" class="social-link facebook">Facebook</a>
+                    <a href="#" role="button" class="social-link github">Github</a>
+                    <a href="#" role="button" class="social-link linkedin">Linkedin</a>
+                    <a href="#" role="button" class="social-link replit">Replit</a>
+                    <a href="#" role="button" class="social-link reddit">Reddit</a>
+                </article>
+            </div>
+        </article>
+    </div>
 </body>
 
 </html>

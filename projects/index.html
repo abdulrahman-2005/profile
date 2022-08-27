@@ -1,80 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Codeman - Projects</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codeman - Projects</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
-    <link rel="stylesheet" href="projects.css" />
-</head>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+		/>
+		<link rel="stylesheet" href="projects.css" />
+	</head>
 
-<body>
-    <nav>
-        <ul>
-            <li style="
+	<body>
+		<nav>
+			<ul>
+				<li
+					style="
 						border: 2px solid var(--primary);
 						border-radius: 12px;
-					">
-                <strong>The Code Man</strong>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="../." role="button">HomePage</a></li>
-            <li>
-                <button onclick="changeTheme(this)" id="changeThemeButton"></button>
-            </li>
-        </ul>
-    </nav>
-    <div>
-        <article style="
+					"
+				>
+					<strong>The Code Man</strong>
+				</li>
+			</ul>
+			<ul>
+				<li><a href="../." role="button">🏠</a></li>
+				<li>
+					<button onclick="changeMode(this)" id="modeChange"></button>
+				</li>
+			</ul>
+		</nav>
+		<div>
+			<article
+				style="
 					background-color: var(--primary);
 					color: var(--primary-inverse);
-				">
-            <h1>Projects - <kbd>Abdulrahman Azmy</kbd></h1>
-        </article>
-        <main class="container">
-            <article>
-                <h2>THE WORLD ATLAS 🌎🗺🚩</h2>
-                <details style="width: 100%">
-                    <summary>
-                        Description
-                    </summary>
-                    <p >
-                        A school Project I made when i was at my 10th grade or my first year in high school
-                    </p>
-                  </details>
-                <a href="https://www.worldencyclopedia.tk" role="button" style="width: 100%">VISIT</a>
-            </article>
-            <article>
-                <h2>BOOK EXCHANGE WEBSITE (static) 📚📕📖</h2>
-                <details style="width: 100%">
-                    <summary>
-                        Description
-                    </summary>
-                    <p >
-                        A Project Between Me And Some Friends in highschool - didn't finish because i had to use serverside but i didn't know it at the time and huh
-                    </p>
-                  </details>
-                <a href="https://www.bookforbook.tk" role="button" style="width: 100%">VISIT</a>
-            </article>
-            <article>
-                <h2>HOLY QURAN QUIZZER 🕋🕌☪</h2>
-                <details style="width: 100%">
-                    <summary>
-                        Description
-                    </summary>
-                    <p >
-                        A Project That I Made To Help My Brothers memorize Quran in a different way
-                    </p>
-                  </details>
-                <a href="https://www.quraniquiz.gq" role="button" style="width: 100%">VISIT</a>
-            </article>
-        </main>
-    </div>
-    <script src="./projects.js"></script>
-</body>
-
+				"
+			>
+				<h1>Projects - <kbd>Abdulrahman Azmy</kbd></h1>
+			</article>
+			<main class="container">
+				<article>
+					<h2>THE WORLD ATLAS 🌎🗺🚩</h2>
+					<details style="width: 100%">
+						<summary>Description</summary>
+						<p>
+							A school Project I made when i was at my 10th grade
+							or my first year in high school
+						</p>
+					</details>
+					<a
+						href="https://www.worldencyclopedia.tk"
+						role="button"
+						style="width: 100%"
+						>VISIT</a
+					>
+				</article>
+				<article>
+					<h2>BOOK EXCHANGE WEBSITE (static) 📚📕📖</h2>
+					<details style="width: 100%">
+						<summary>Description</summary>
+						<p>
+							A Project Between Me And Some Friends in highschool
+							- didn't finish because i had to use serverside but
+							i didn't know it at the time and huh
+						</p>
+					</details>
+					<a
+						href="https://www.bookforbook.tk"
+						role="button"
+						style="width: 100%"
+						>VISIT</a
+					>
+				</article>
+				<article>
+					<h2>HOLY QURAN QUIZZER 🕋🕌☪</h2>
+					<details style="width: 100%">
+						<summary>Description</summary>
+						<p>
+							A Project That I Made To Help My Brothers memorize
+							Quran in a different way
+						</p>
+					</details>
+					<a
+						href="https://www.quraniquiz.gq"
+						role="button"
+						style="width: 100%"
+						>VISIT</a
+					>
+				</article>
+			</main>
+		</div>
+		<script src="../js/index.js"></script>
+	</body>
 </html>

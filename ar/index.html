@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عبدالرحن عزمي - the code man</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+
+</head>
+
+<body>
+    <div id="container">
+        <article id="card">
+            <nav id="header">
+                <ul>
+                    <li>
+                        <strong role="button" class="outline" style="
+									cursor: unset;
+									padding: 1vw !important;
+									color: white;
+                                    background-color: var(--primary);
+								">عن عبدالرحمن</strong>
+                    </li>
+                    <li>
+                        <button class="utilButton" onclick="changeMode(this)" id="modeChange">
+                            ☀
+                        </button>
+                    </li>
+                    <li>
+                        <button class="utilButton" onclick="changeLanguage()" id="langChange">
+                            En
+                        </button>
+                    </li>
+                </ul>
+                <ul class="jokeButtonsContainer">
+                    <li>
+                        <button class="jokeButton" style="background: rgb(109, 255, 109)"></button>
+                    </li>
+                    <li>
+                        <button class="jokeButton" style="background: rgb(255, 255, 65)"></button>
+                    </li>
+                    <li>
+                        <button class="jokeButton" id="red" onclick="jokeMessage()"></button>
+                    </li>
+                </ul>
+            </nav>
+            <div id="body" class="grid">
+                <article id="profile-picture">
+                    <img src="../pro.jpg" alt="" />
+                    <h5>دي صورتي</h5>
+                </article>
+                <article id="profile-desc">
+                    <h2>مرحبا، انا عبدالرحمن</h2>
+                    <a href="./p" role="button">...اعرف المزيد</a>
+                </article>
+                <article id="profile-links" class="grid">
+                    <a href="#" role="button" class="social-link twitter">Twitter</a>
+                    <a href="#" role="button" class="social-link facebook">Facebook</a>
+                    <a href="#" role="button" class="social-link github">Github</a>
+                    <a href="#" role="button" class="social-link linkedin">Linkedin</a>
+                    <a href="#" role="button" class="social-link replit">Replit</a>
+                    <a href="#" role="button" class="social-link reddit">Reddit</a>
+                </article>
+            </div>
+        </article>
+    </div>
+    <script src="../../js/index.js"></script>
+</body>
+
+</html>

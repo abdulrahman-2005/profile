@@ -1,0 +1,247 @@
+:root {
+	--card-els-border-radius: 20px;
+	--flash-border-color: red;
+	--card-header-size: 12%;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box !important;
+}
+
+article,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	padding: 0.5vw;
+	margin: 0vw;
+    border: none !important;
+}
+
+nav * {
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center !important;
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#card {
+	background-color: rgba(0, 0, 0, 0.575);
+	height: fit-content;
+	width: 70vw;
+	padding: 1vw;
+	border-radius: var(--card-els-border-radius);
+	display: flex;
+	flex-direction: column;
+	gap: 0.2vw;
+}
+
+#card div {
+    margin: 0 !important;
+}
+
+
+#card #header {
+	height: var(--card-header-size);
+	border-radius: var(--card-els-border-radius);
+	padding: 1vw;
+	display: flex;
+}
+
+
+#header .jokeButtonsContainer {
+    display: flex;
+    gap: .2vw;
+    align-items: center;
+}
+
+#header .jokeButton {
+	height: 2vw;
+	width: 2vw;
+	border-radius: 50%;
+}
+
+#red {
+    background-color: rgb(255, 33, 33);
+}
+
+#header #jokeButtonsContainer * {
+	background-color: red;
+	border-radius: 50%;
+	height: 1vw;
+	width: 1vw;
+}
+
+.utilButton {
+    margin: 1vw !important;
+    width: fit-content;
+    padding: 1vw !important;
+    border-radius: calc(var(--card-els-border-radius) + 10px);
+}
+
+#card #body {
+	height: calc(100% - var(--card-header-size));
+	border-radius: var(--card-els-border-radius);
+	padding: 1vw;
+	display: grid;
+	grid-template-columns: repeat(9, auto);
+	grid-template-rows: repeat(4, auto);
+	gap: 1vw;
+	border: 2px solid var(--flash-border-color)
+}
+
+#body * {
+	border-radius: var(--card-els-border-radius);
+}
+
+#body article {
+    padding: 2vw;
+	border: 2px solid var(--flash-border-color) !important;
+}
+
+#body #profile-picture {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 5;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+#body #profile-desc {
+	grid-column-start: 4;
+	grid-column-end: 10;
+	grid-row-start: 1;
+	grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--page-direction);
+    text-align: var(--page-direction);
+}
+#body #profile-links {
+	grid-column-start: 4;
+	grid-column-end: 10;
+	grid-row-start: 3;
+	grid-row-end: 5;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(2, auto);
+	gap: 0.3vw;
+}
+
+
+@keyframes shake {
+	20%,
+	80% {
+		transform: translate3d(-1px, 0, 0) rotate(5deg);
+	}
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0) rotate(-5deg);
+	}
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0) rotate(5deg);
+	}
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0) rotate(-5deg);
+	}
+}
+
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link:hover {
+	animation: shake 1.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+	transform-origin: 50% 50%;
+}
+
+button:focus {
+    border: none !important;
+}
+
+.facebook:hover {
+	background-color: rgb(66 103 178) !important;
+}
+
+.twitter:hover {
+	background-color: rgb(29 161 242)!important;
+}
+
+.linkedin:hover {
+	background-color: rgb( 10 102 194  )!important;
+}
+
+.reddit:hover {
+	background-color: rgb( 255, 69, 0 )!important;
+}
+
+.github:hover {
+	background-color: rgb(26, 27, 27)!important;
+}
+
+.gmail:hover {
+	background-color:rgb(255, 4, 0) !important;
+}
+
+.replit:hover {
+    background-color: gray;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    #card {
+        height: 90vh;
+        width: 98vw;
+    }
+
+    #header .jokeButton {
+        height: 4vw;
+        width: 4vw;
+    }
+}
+
+
+/* Pink Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--primary: #1e0048;
+		--primary-hover: #40009b;
+		--primary-focus: #6a00ff;
+		--primary-inverse: #fff;
+        --background-color: rgb(105, 0, 170);
+	}
+}
+[data-theme="dark"] {
+	--primary: #1e0048;
+	--primary-hover: #40009b;
+	--primary-focus: #6a00ff;
+	--primary-inverse: #fff;
+    --background-color: rgb(96, 0, 156);
+}
