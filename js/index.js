@@ -1,5 +1,10 @@
 window.onload = () => {
-	let currentTheme = JSON.parse(localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")).mode;
+	let currentTheme
+	try {
+		currentTheme = JSON.parse(localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")).mode;
+	} catch (error) {
+		currentTheme = "dark";
+	}
 	if  (currentTheme === undefined) {
 		currentTheme = "dark";
 	}
