@@ -8,8 +8,18 @@ window.onload = () => {
 	if  (currentTheme === undefined) {
 		currentTheme = "dark";
 	}
+	try {
+		currentLanguage = JSON.parse(localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")).language;
+	} catch (error) {
+		currentLanguage = "en";
+	}
+	localStorage.setItem("__AbdulrahmanAzmyWebsiteStorage__", JSON.stringify({
+		mode: currentTheme,
+		language: currentLanguage
+	}));
 	document.getElementsByTagName("html")[0].setAttribute("data-theme", currentTheme);
 	document.getElementById("modeChange").innerHTML = currentTheme === "dark" ? "☀" : "🌙";
+
 }
 
 
