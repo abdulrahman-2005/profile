@@ -12,6 +12,11 @@
 	box-sizing: border-box !important;
 }
 
+*:focus {
+	border: none !important;
+	outline: none !important;
+}
+
 article,
 button,
 h1,
