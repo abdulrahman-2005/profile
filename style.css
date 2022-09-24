@@ -132,6 +132,12 @@ nav * {
 	justify-content: center;
 	flex-direction: column;
 }
+
+#body #profile-picture img {
+	height: fit-content;
+	width: fit-content;
+}
+
 #body #profile-desc {
 	grid-column-start: 4;
 	grid-column-end: 10;
@@ -229,6 +235,31 @@ button:focus {
         height: 4vw;
         width: 4vw;
     }
+	#card #body {
+		grid-template-columns: repeat(9, auto);
+		grid-template-rows: repeat(12, auto);
+	}
+	
+	#body #profile-picture {
+		grid-column-start: 1;
+		grid-column-end: 6;
+		grid-row-start: 1;
+		grid-row-end: 5;
+	}
+	#body #profile-desc {
+		display: none;
+		grid-column-start: 4;
+		grid-column-end: 10;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	#body #profile-links {
+		display: none;
+		grid-column-start: 4;
+		grid-column-end: 10;
+		grid-row-start: 3;
+		grid-row-end: 5;
+	}
 }
 
 
@@ -249,4 +280,10 @@ button:focus {
 	--primary-focus: #6a00ff;
 	--primary-inverse: #fff;
     --background-color: rgb(96, 0, 156);
+}
+
+kbd {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
