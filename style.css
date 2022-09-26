@@ -293,6 +293,8 @@ button:focus {
 		padding-top: 1vw !important;
 		grid-template-columns: repeat(6, 17%);
 		grid-template-rows: repeat(1, 90%);
+		justify-content: center;
+		align-items: center;
 	}
 
 	#body #profile-links img {
@@ -307,6 +309,9 @@ button:focus {
 		scale: 260% !important;
 	}
 	#body #profile-links .twitter img {
+		scale: 260% !important;
+	}
+	#body #profile-links .linkedin img {
 		scale: 260% !important;
 	}
 
