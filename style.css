@@ -148,7 +148,7 @@ nav * {
 	justify-content: center;
 	grid-template-columns: repeat(3, 30%);
 	grid-template-rows: repeat(2, 40%);
-	gap: 0.3vw;
+	gap: 0;
 	padding: 0.1vw !important;
 	padding-top: 5% !important;
 }
@@ -273,8 +273,8 @@ button:focus {
 		height: 10% !important;
 	}
 	#body #profile-desc {
-		height: 50%;
-		width: 50%;
+		height: 29%;
+		width: 100%;
 		text-align: left;
 		display: flex;
 		justify-content: center;
@@ -287,23 +287,30 @@ button:focus {
 	}
 
 	#body #profile-links {
-		position: relative;
-		width: 49%;
-		height: 50%;
-		top: -50%;
-		left: 50%;
-		margin-left: 1% !important;
+		width: 100%;
+		height: 20%;
+		margin-top: 1% !important;
+		padding-top: 1vw !important;
+		grid-template-columns: repeat(6, 17%);
+		grid-template-rows: repeat(1, 90%);
 	}
 
 	#body #profile-links img {
 		background-size: contain;
 		background-repeat: no-repeat;
-		height: 100% !important;
-		width: 100% !important;
+		scale: 200% !important;
 	}
-	.facebook img {
-		scale: 80% !important;
+	#body #profile-links .facebook img {
+		scale: 120% !important;
 	}
+	#body #profile-links .github img {
+		scale: 260% !important;
+	}
+	#body #profile-links .twitter img {
+		scale: 260% !important;
+	}
+
+	
 }
 
 /* Pink Dark scheme (Auto) */
