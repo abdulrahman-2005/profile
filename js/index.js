@@ -1,6 +1,16 @@
 let currentTheme;
 let currentLanguage;
 window.onload = () => {
+	document.getElementsByTagName("html")[0].innerHTML += `<a id="byMeCoffeePopUp" href="https://www.buymeacoffee.com/abdoazmy">☕$</a>	`
+	const buyMeCoffeePopUp = document.getElementById("byMeCoffeePopUp");
+
+	setInterval(() => {
+		buyMeCoffeePopUp.style.zIndex = 10000;
+		setTimeout(() => {
+			buyMeCoffeePopUp.style.zIndex = -1;
+		}, 15000);
+	}, 5000);none
+
 	try {
 		currentTheme = JSON.parse(
 			localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")
@@ -39,6 +49,7 @@ window.onload = () => {
 
 	window.href = currentLanguage === "en" ? ".." : "ar";
 };
+
 
 class LocalStorageAccess {
 	constructor(StorageName) {
