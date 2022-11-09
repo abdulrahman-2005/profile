@@ -10,7 +10,7 @@ window.onload = () => {
 			buyMeCoffeePopUp.style.zIndex = -1;
 		}, 15000);
 	}, 5000);none
-
+	localStorage.clear();
 	try {
 		currentTheme = JSON.parse(
 			localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")
