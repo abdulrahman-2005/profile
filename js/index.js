@@ -86,7 +86,7 @@ const englishJokeMessages = [
 
 const arabicJokeMessages = [
 	"بس خلاص",
-	"كفاية يقى",
+	"كفاية بقى",
 	"مش كل شوية",
 	"يعم صل عالنبي",
 	"بطل تدوس الزراير",
