@@ -58,7 +58,7 @@ nav {
 	flex-wrap: w;
 }
 
-main {
+#contactContainer {
 	padding-bottom: 10rem !important;
 	display: flex;
 	justify-content: center;
@@ -67,7 +67,7 @@ main {
 	
 }
 
-main article {
+#contactContainer article {
 	width: 100%;
 	background: transparent ;
 	display: flex;
@@ -76,13 +76,13 @@ main article {
 	gap: 1%
 }
 
-main article a {
+#contactContainer a {
 	width: 50%;
 	border: none;
 }
 
 
-a, button {
+#contactContainer a, #contactContainer button {
 	color: black !important;
 }
 
@@ -118,8 +118,7 @@ a, button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 1px;
-	padding: 0;
+	margin: 1rem;
 }
 
 .box-shadow-hover:hover {
