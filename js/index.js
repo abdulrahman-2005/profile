@@ -7,6 +7,7 @@ window.onload = () => {
 		).mode;
 	} catch (error) {
 		currentTheme = "dark";
+		changeLanguage = "en";
 	}
 	if (currentTheme === undefined) {
 		currentTheme = "dark";
@@ -14,8 +15,8 @@ window.onload = () => {
 	try {
 		currentLanguage = JSON.parse(
 			localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")
-			).language;
-		} catch (error) {
+		).language;
+	} catch (error) {
 		currentLanguage = "en";
 	}
 	localStorage.setItem(
@@ -24,16 +25,21 @@ window.onload = () => {
 			mode: currentTheme,
 			language: currentLanguage,
 		})
-		);
-		document
+	);
+	document
 		.getElementsByTagName("html")[0]
 		.setAttribute("data-theme", currentTheme);
-		let button = document.getElementById("modeChange")
-		button.innerHTML = currentTheme === "dark" ? "☀" : "🌙";
-		button.setAttribute("data-tooltip", currentTheme === "dark" ? "Light Mode" : "Dark Mode");
-		button.setAttribute("data-placement", "bottom");
-	};
-	
+	let button = document.getElementById("modeChange");
+	button.innerHTML = currentTheme === "dark" ? "☀" : "🌙";
+	button.setAttribute(
+		"data-tooltip",
+		currentTheme === "dark" ? "Light Mode" : "Dark Mode"
+	);
+	button.setAttribute("data-placement", "bottom");
+
+	window.href = currentLanguage === "en" ? ".." : "ar";
+};
+
 class LocalStorageAccess {
 	constructor(StorageName) {
 		this._storage = window.localStorage;
@@ -73,8 +79,7 @@ const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 function flash() {
 	flashyBorderStyler.innerHTML = `
 	:root {
-		--flash-border-color: ${
-			colors[Math.floor(Math.random() * colors.length)]
+		--flash-border-color: ${colors[Math.floor(Math.random() * colors.length)]
 		} !important;
 	}`;
 }
@@ -112,11 +117,11 @@ function jokeMessage() {
 	let joke =
 		MyWebsiteStorage.get().language === "en"
 			? englishJokeMessages[
-					Math.floor(Math.random() * englishJokeMessages.length)
-			  ]
+			Math.floor(Math.random() * englishJokeMessages.length)
+			]
 			: arabicJokeMessages[
-					Math.floor(Math.random() * arabicJokeMessages.length)
-			  ];
+			Math.floor(Math.random() * arabicJokeMessages.length)
+			];
 	let old = document.getElementById("container").innerHTML;
 	document.getElementById(
 		"container"
@@ -142,9 +147,13 @@ function changeMode(button) {
 		"data-theme",
 		htmlEl.getAttribute("data-theme") === "dark" ? "light" : "dark"
 	);
-	button.innerHTML = htmlEl.getAttribute("data-theme") === "dark" ? "☀" : "🌙";
+	button.innerHTML =
+		htmlEl.getAttribute("data-theme") === "dark" ? "☀" : "🌙";
 	oldStorage.mode = htmlEl.getAttribute("data-theme");
-	button.setAttribute("data-tooltip", oldStorage.mode === "dark" ? "Light Mode" : "Dark Mode");
+	button.setAttribute(
+		"data-tooltip",
+		oldStorage.mode === "dark" ? "Light Mode" : "Dark Mode"
+	);
 	MyWebsiteStorage.set(oldStorage);
 }
 
