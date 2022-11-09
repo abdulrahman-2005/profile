@@ -24,8 +24,10 @@
             <li style="border: 2px solid var(--primary); border-radius: 12px"><strong>The Code Man</strong></li>
         </ul>
         <ul>
-            <li><a href="../." role="button">🏠</a></li>
+
             <li>
+                <a href="./index.html" role="button" class="secondary">◀ Back</a>
+            </li>            <li>
                 <button onclick="changeMode(this)" id="modeChange"></button>
             </li>
         </ul>
@@ -35,36 +37,20 @@
             <h1>Contact - <kbd>Abdulrahman Azmy</kbd></h1>
             <h4>abuazmy.gg@gmail.com</h4>
         </article>
+        
         <main class="container">
-            <form>
-                <!-- Grid -->
-                <div class="grid">
-                    <!-- Markup example 1: input is inside label -->
-                    <label for="firstname">
-                        First name
-                        <input type="text" id="firstname" name="firstname" placeholder="First name" required />
-                    </label>
-
-                    <label for="lastname">
-                        Last name
-                        <input type="text" id="lastname" name="lastname" placeholder="Last name" required />
-                    </label>
-                </div>
-
-                <!-- Markup example 2: input is after label -->
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="Email address" required />
-                <small>We'll never share your email with anyone else.</small>
-
-                <label for="message"></label>
-                <textarea id="message" name="message"></textarea>
-
-                <!-- Button -->
-                <button type="submit">Send Message</button>
-            </form>
+            <textarea name="message" id="message-textarea" placeholder="type your message, or just click the button"></textarea>
+            <button class="whatsapp" onclick="sendMessage()">Send On Whatsapp</button>
+        
+            <h3>or message me over</h3>
+            <article>
+                <a role="button" target="_blank" class="messenger box-shadow-hover" href="https://www.messenger.com/t/100033968274050">Messenger</a>
+                <a role="button" target="_blank" class="telegram box-shadow-hover" href="https://t.me/+201099417149">Telegram</a>
+            </article>
         </main>
     </div>
     <script src="./p.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

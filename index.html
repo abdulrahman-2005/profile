@@ -20,6 +20,11 @@
         gtag("config", "G-KVBN6L8RKV");
     </script>
     <script src="js/index.js"></script>
+    <script>
+        
+		let changeLanguageButton = document.getElementById("langChange");
+		changeLanguageButton.setAttribute("data-tooltip", oldStorage.language === "en" ? "العربية" : "English");
+    </script>
 </head>
 
 <body>
@@ -40,7 +45,7 @@
                         </button>
                     </li>
                     <li>
-                        <button class="utilButton" onclick="changeLanguage()" id="langChange">
+                        <button class="utilButton" onclick="changeLanguage()" id="langChange" data-tooltip="arabic">
                             Ar
                         </button>
                     </li>

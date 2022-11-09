@@ -232,8 +232,17 @@ button:focus {
 
 
 
- .facebook img {
+.facebook img {
 	scale: 98% !important;
+}
+.reddit img {
+	scale: 120% !important;
+}
+.whatsapp img {
+	scale: 130% !important;
+}
+.github img {
+	scale: 170% !important;
 }
 
 @media screen and (max-width: 550px) {

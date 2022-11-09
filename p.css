@@ -58,6 +58,45 @@ nav {
 	flex-wrap: w;
 }
 
+main {
+	padding-bottom: 10rem !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+main article {
+	width: 100%;
+	background: transparent ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1%
+}
+
+main article a {
+	width: 50%;
+	border: none;
+}
+
+
+a, button {
+	color: black !important;
+}
+
+.telegram {
+	background: 	rgb(0, 136, 204);
+}
+
+.whatsapp {
+	background: rgb(95, 252, 123)
+}
+
+.messenger {
+	background: linear-gradient(rgb(255, 121, 164) 0%, rgb(150, 131, 255) 50%, rgb(0, 229, 255) 100%);;
+}
 
 /* Pink Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
@@ -76,4 +115,13 @@ nav {
 	--primary-focus: #6a00ff;
 	--primary-inverse: #fff;
     --background-color: rgb(96, 0, 156);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1px;
+	padding: 0;
+}
+
+.box-shadow-hover:hover {
+	box-shadow: 4px 4px 1px 1px black;
 }

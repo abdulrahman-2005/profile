@@ -1,28 +1,39 @@
+let currentTheme;
+let currentLanguage;
 window.onload = () => {
-	let currentTheme
 	try {
-		currentTheme = JSON.parse(localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")).mode;
+		currentTheme = JSON.parse(
+			localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")
+		).mode;
 	} catch (error) {
 		currentTheme = "dark";
 	}
-	if  (currentTheme === undefined) {
+	if (currentTheme === undefined) {
 		currentTheme = "dark";
 	}
 	try {
-		currentLanguage = JSON.parse(localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")).language;
-	} catch (error) {
+		currentLanguage = JSON.parse(
+			localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")
+			).language;
+		} catch (error) {
 		currentLanguage = "en";
 	}
-	localStorage.setItem("__AbdulrahmanAzmyWebsiteStorage__", JSON.stringify({
-		mode: currentTheme,
-		language: currentLanguage
-	}));
-	document.getElementsByTagName("html")[0].setAttribute("data-theme", currentTheme);
-	document.getElementById("modeChange").innerHTML = currentTheme === "dark" ? "☀" : "🌙";
-
-}
-
-
+	localStorage.setItem(
+		"__AbdulrahmanAzmyWebsiteStorage__",
+		JSON.stringify({
+			mode: currentTheme,
+			language: currentLanguage,
+		})
+		);
+		document
+		.getElementsByTagName("html")[0]
+		.setAttribute("data-theme", currentTheme);
+		let button = document.getElementById("modeChange")
+		button.innerHTML = currentTheme === "dark" ? "☀" : "🌙";
+		button.setAttribute("data-tooltip", currentTheme === "dark" ? "Light Mode" : "Dark Mode");
+		button.setAttribute("data-placement", "bottom");
+	};
+	
 class LocalStorageAccess {
 	constructor(StorageName) {
 		this._storage = window.localStorage;
@@ -62,7 +73,8 @@ const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 function flash() {
 	flashyBorderStyler.innerHTML = `
 	:root {
-		--flash-border-color: ${colors[Math.floor(Math.random() * colors.length)]
+		--flash-border-color: ${
+			colors[Math.floor(Math.random() * colors.length)]
 		} !important;
 	}`;
 }
@@ -100,11 +112,11 @@ function jokeMessage() {
 	let joke =
 		MyWebsiteStorage.get().language === "en"
 			? englishJokeMessages[
-			Math.floor(Math.random() * englishJokeMessages.length)
-			]
+					Math.floor(Math.random() * englishJokeMessages.length)
+			  ]
 			: arabicJokeMessages[
-			Math.floor(Math.random() * arabicJokeMessages.length)
-			];
+					Math.floor(Math.random() * arabicJokeMessages.length)
+			  ];
 	let old = document.getElementById("container").innerHTML;
 	document.getElementById(
 		"container"
@@ -120,27 +132,41 @@ function changeLanguage() {
 	oldStorage.language = oldStorage.language === "en" ? "ar" : "en";
 	MyWebsiteStorage.set(oldStorage);
 	window.location.href = oldStorage.language === "en" ? ".." : "ar";
+	let changeLanguageButton = document.getElementById("changeLanguage");
 }
 
 function changeMode(button) {
 	oldStorage = MyWebsiteStorage.get();
-	document
-		.getElementsByTagName("html")[0]
-		.setAttribute(
-			"data-theme",
-			document
-				.getElementsByTagName("html")[0]
-				.getAttribute("data-theme") === "dark"
-				? "light"
-				: "dark"
-		);
-	button.innerHTML =
-		document.getElementsByTagName("html")[0].getAttribute("data-theme") ===
-			"dark"
-			? "☀"
-			: "🌙";
-	oldStorage.mode = document
-		.getElementsByTagName("html")[0]
-		.getAttribute("data-theme");
+	let htmlEl = document.getElementsByTagName("html")[0];
+	htmlEl.setAttribute(
+		"data-theme",
+		htmlEl.getAttribute("data-theme") === "dark" ? "light" : "dark"
+	);
+	button.innerHTML = htmlEl.getAttribute("data-theme") === "dark" ? "☀" : "🌙";
+	oldStorage.mode = htmlEl.getAttribute("data-theme");
+	button.setAttribute("data-tooltip", oldStorage.mode === "dark" ? "Light Mode" : "Dark Mode");
 	MyWebsiteStorage.set(oldStorage);
+}
+
+let defalutMessage = {
+	ar: "مرحبا، اريد اتحدث معك",
+	en: "Hello, I want to talk to you",
+};
+function sendMessage(option = "whatsapp") {
+	let message = document.getElementById("message-textarea").value;
+	message =
+		message === ""
+			? defalutMessage[MyWebsiteStorage.get().language.toLowerCase()]
+			: message;
+
+	if (option === "whatsapp") {
+		message = message.replace(/ /g, "-");
+		window.open(`https://wa.me/201201590033?text=${message}`, "_blank");
+	} else if (option === "email") {
+		message = message.replace(/ /g, "20%");
+		window.open(
+			`mailto:abuazmy.gg@gmail.com?subject=ContactFromWebsite&body=${message}`,
+			"_blank"
+		);
+	}
 }
