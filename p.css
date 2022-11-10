@@ -98,23 +98,20 @@ nav {
 	background: linear-gradient(rgb(255, 121, 164) 0%, rgb(150, 131, 255) 50%, rgb(0, 229, 255) 100%);;
 }
 
-/* Pink Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-	:root:not([data-theme="light"]) {
-		--primary: #1e0048;
-		--primary-hover: #40009b;
-		--primary-focus: #6a00ff;
-		--primary-inverse: #fff;
-        --background-color: rgb(105, 0, 170);
-	}
-}
 [data-theme="dark"] {
-	--primary: #1e0048;
-	--primary-hover: #40009b;
-	--primary-focus: #6a00ff;
-	--primary-inverse: #fff;
-    --background-color: rgb(96, 0, 156);
+	--primary: #1e0048 !important;
+	--primary-hover: #40009b !important;
+	--primary-focus: #6a00ff !important;
+	--primary-inverse: #fff !important;
+	--background-color: rgb(105, 0, 170) !important;
+}
+
+[data-theme="light"] {
+	--primary: #AC92EC !important;
+	--primary-hover: #b37cff !important;
+	--primary-focus: #af8fff !important;
+	--primary-inverse: #000 !important;
+	--background-color: #D770AD !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
