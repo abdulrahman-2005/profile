@@ -230,8 +230,6 @@ button:focus {
 
  */
 
-
-
 .facebook img {
 	scale: 98% !important;
 }
@@ -323,54 +321,26 @@ button:focus {
 	#body #profile-links .linkedin img {
 		scale: 260% !important;
 	}
-
-	
 }
 
-/* Pink Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-	:root:not([data-theme="light"]) {
-		--primary: #1e0048;
-		--primary-hover: #40009b;
-		--primary-focus: #6a00ff;
-		--primary-inverse: #fff;
-		--background-color: rgb(105, 0, 170);
-	}
-}
 [data-theme="dark"] {
-	--primary: #1e0048;
-	--primary-hover: #40009b;
-	--primary-focus: #6a00ff;
-	--primary-inverse: #fff;
-	--background-color: rgb(96, 0, 156);
+	--primary: #1e0048 !important;
+	--primary-hover: #40009b !important;
+	--primary-focus: #6a00ff !important;
+	--primary-inverse: #fff !important;
+	--background-color: rgb(105, 0, 170) !important;
+}
+
+[data-theme="light"] {
+	--primary: #AC92EC !important;
+	--primary-hover: #b37cff !important;
+	--primary-focus: #af8fff !important;
+	--primary-inverse: #000 !important;
+	--background-color: #D770AD !important;
 }
 
 kbd {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-
-@keyframes move {
-	0%   { transform: scale(1)   translate(10px, -30px); }
-	38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-	40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-	78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
-	80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
-	100% { transform: scale(1)   translate(10px, -30px); }
-  }
-
-#byMeCoffeePopUp {
-	position: absolute;
-	z-index: 1000;
-	top: 50%;
-	left: 0;
-	background: rgb(255, 181, 54);
-	font-size: 2rem;
-	padding: 1rem;
-	transform-origin: 50% 50%;
-	border-radius: 50% 50% 10% 50%;
-	animation: move 10s ease-in-out infinite;
 }

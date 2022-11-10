@@ -1,16 +1,7 @@
 let currentTheme;
 let currentLanguage;
 window.onload = () => {
-	document.getElementsByTagName("html")[0].innerHTML += `<a id="byMeCoffeePopUp" href="https://www.buymeacoffee.com/abdoazmy">☕$</a>	`
-	const buyMeCoffeePopUp = document.getElementById("byMeCoffeePopUp");
-
-	setInterval(() => {
-		buyMeCoffeePopUp.style.zIndex = 10000;
-		setTimeout(() => {
-			buyMeCoffeePopUp.style.zIndex = -1;
-		}, 15000);
-	}, 5000);none
-	localStorage.clear();
+	const HTMLEl = document.getElementsByTagName("html")[0];
 	try {
 		currentTheme = JSON.parse(
 			localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__")
@@ -36,18 +27,16 @@ window.onload = () => {
 			language: currentLanguage,
 		})
 	);
-	document
-		.getElementsByTagName("html")[0]
-		.setAttribute("data-theme", currentTheme);
-	let button = document.getElementById("modeChange");
-	button.innerHTML = currentTheme === "dark" ? "☀" : "🌙";
-	button.setAttribute(
+	HTMLEl.setAttribute("data-theme", currentTheme);
+	
+	let changeModeButton = document.getElementById("modeChange");
+	
+	changeModeButton.innerHTML = currentTheme === "dark" ? "☀" : "🌙";
+	changeModeButton.setAttribute(
 		"data-tooltip",
 		currentTheme === "dark" ? "Light Mode" : "Dark Mode"
 	);
-	button.setAttribute("data-placement", "bottom");
-
-	window.href = currentLanguage === "en" ? ".." : "ar";
+	changeModeButton.setAttribute("data-placement", "bottom");
 };
 
 
