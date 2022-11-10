@@ -37,6 +37,9 @@ window.onload = () => {
 		currentTheme === "dark" ? "Light Mode" : "Dark Mode"
 	);
 	changeModeButton.setAttribute("data-placement", "bottom");
+
+	const headEl = document.getElementsByTagName("head")[0];
+
 };
 
 

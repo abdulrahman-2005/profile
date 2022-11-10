@@ -107,10 +107,10 @@ nav {
 }
 
 [data-theme="light"] {
-	--primary: #AC92EC !important;
-	--primary-hover: #b37cff !important;
-	--primary-focus: #af8fff !important;
-	--primary-inverse: #000 !important;
+	--primary: #fdfdfd !important;
+	--primary-hover: #902565 !important;
+	--primary-focus: #f200ff !important;
+	--primary-inverse: rgb(0, 0, 0) !important;
 	--background-color: #D770AD !important;
 }
 

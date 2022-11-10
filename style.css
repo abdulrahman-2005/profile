@@ -142,13 +142,35 @@ nav * {
 	justify-content: var(--page-direction);
 	text-align: var(--page-direction);
 }
+
+
+@keyframes shake {
+	20%,
+	80% {
+		transform:  rotate(5deg);
+	}
+	20%,
+	80% {
+		transform:  rotate(-5deg);
+	}
+	30%,
+	50%,
+	70% {
+		transform: rotate(5deg);
+	}
+	40%,
+	60% {
+		transform:  rotate(-5deg);
+	}
+}
+
 #body #profile-links {
 	grid-column: 4/10;
 	grid-row: 3/5;
 	justify-content: center;
 	grid-template-columns: repeat(3, 30%);
 	grid-template-rows: repeat(2, 40%);
-	gap: 0;
+	gap: 2%;
 	padding: 0.1vw !important;
 	padding-top: 5% !important;
 }
@@ -161,31 +183,12 @@ nav * {
 	scale: 150%;
 }
 
-@keyframes shake {
-	20%,
-	80% {
-		transform: translate3d(-1px, 0, 0) rotate(5deg);
-	}
-	20%,
-	80% {
-		transform: translate3d(2px, 0, 0) rotate(-5deg);
-	}
-	30%,
-	50%,
-	70% {
-		transform: translate3d(-4px, 0, 0) rotate(5deg);
-	}
-	40%,
-	60% {
-		transform: translate3d(4px, 0, 0) rotate(-5deg);
-	}
-}
-
 .social-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: transparent;
+	background-color: transparent !important;
+
 }
 
 .social-link:hover {
@@ -332,10 +335,10 @@ button:focus {
 }
 
 [data-theme="light"] {
-	--primary: #AC92EC !important;
-	--primary-hover: #b37cff !important;
-	--primary-focus: #af8fff !important;
-	--primary-inverse: #000 !important;
+	--primary: #fdfdfd !important;
+	--primary-hover: #902565 !important;
+	--primary-focus: #f200ff !important;
+	--primary-inverse: rgb(0, 0, 0) !important;
 	--background-color: #D770AD !important;
 }
 
