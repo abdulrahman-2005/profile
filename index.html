@@ -1,1 +1,8 @@
-<meta http-equiv="Refresh" content="0; url='./en'" />
+<script>
+    try {
+        const data = JSON.parse(localStorage.getItem("__AbdulrahmanAzmyWebsiteStorage__"))
+        window.location = `./${data.language}`
+    } catch (error) {
+        window.location = "./en"
+    }
+</script>
