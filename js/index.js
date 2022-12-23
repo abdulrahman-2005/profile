@@ -139,7 +139,7 @@ function changeLanguage() {
 	oldStorage = MyWebsiteStorage.get();
 	oldStorage.language = oldStorage.language === "en" ? "ar" : "en";
 	MyWebsiteStorage.set(oldStorage);
-	window.location.href = oldStorage.language === "en" ? ".." : "ar";
+	window.location.href = oldStorage.language === "en" ? "../en" : "../ar";
 	let changeLanguageButton = document.getElementById("changeLanguage");
 }
 

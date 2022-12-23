@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>عبدالرحمن عزمي - the code man</title>
+    <title>The code man</title>
     <link rel="icon" href="../icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
     <link rel="stylesheet" href="../style.css" />
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-        gtag('config', 'G-KVBN6L8RKV');
+        gtag("config", "G-KVBN6L8RKV");
     </script>
-
+    
 </head>
 
 <body>
@@ -30,17 +33,16 @@
 									cursor: unset;
 									padding: 1vw !important;
 									color: white;
-                                    background-color: var(--primary);
-								">عن عبدالرحمن</strong>
+								">About Abdo</strong>
                     </li>
                     <li>
-                        <button class="utilButton" onclick="changeMode(this)"data-tooltip="تغيير الوضع" id="modeChange">
+                        <button class="utilButton" onclick="changeMode(this)" id="modeChange">
                             ☀
                         </button>
                     </li>
                     <li>
-                        <button class="utilButton" onclick="changeLanguage()"data-tooltip="الانجليزية" id="langChange">
-                            En
+                        <button class="utilButton" onclick="changeLanguage()" id="langChange" data-tooltip="arabic">
+                            Ar
                         </button>
                     </li>
                 </ul>
@@ -52,18 +54,18 @@
                         <button class="jokeButton" style="background: rgb(255, 255, 65)"></button>
                     </li>
                     <li>
-                        <button class="jokeButton" id="red" onclick="jokeMessage()" data-tooltip="دوس بس"></button>
+                        <button onclick="jokeMessage()" class="jokeButton" id="red"></button>
                     </li>
                 </ul>
             </nav>
             <div id="body" class="grid">
                 <article id="profile-picture">
                     <img src="../pro.jpg" alt="" />
-                    <h5>دي صورتي</h5>
+                    <h5>That's me</h5>
                 </article>
                 <article id="profile-desc">
-                    <h2>مرحبا، انا عبدالرحمن</h2>
-                    <a href="./p" role="button">...اعرف المزيد</a>
+                    <h2>Hi, This is Abdulrahman</h2>
+                    <a href="./p" role="button">Learn More...</a>
                 </article>
                 <article id="profile-links" class="grid">
                     <a target="_blank" href="https://twitter.com/Abdulra42082285" data-tooltip="twitter" role="button"

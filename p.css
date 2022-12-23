@@ -76,27 +76,7 @@ nav {
 	gap: 1%
 }
 
-#contactContainer a {
-	width: 50%;
-	border: none;
-}
 
-
-#contactContainer a, #contactContainer button {
-	color: black !important;
-}
-
-.telegram {
-	background: 	rgb(0, 136, 204);
-}
-
-.whatsapp {
-	background: rgb(95, 252, 123)
-}
-
-.messenger {
-	background: linear-gradient(rgb(255, 121, 164) 0%, rgb(150, 131, 255) 50%, rgb(0, 229, 255) 100%);;
-}
 
 [data-theme="dark"] {
 	--primary: #1e0048 !important;
