@@ -8,7 +8,7 @@ window.onload = () => {
 		).mode;
 	} catch (error) {
 		currentTheme = "dark";
-		changeLanguage = "en";
+		currentLanguage = "en";
 	}
 	if (currentTheme === undefined) {
 		currentTheme = "dark";
