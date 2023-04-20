@@ -80,7 +80,7 @@ function jokeMessage() {
   }, 2000);
 }
 
-function toggleLanguage() {
+function changeLanguage() {
   const oldStorage = myWebsiteStorage.get();
   const language = oldStorage.language === 'en' ? 'ar' : 'en';
   myWebsiteStorage.set({ ...oldStorage, language });
