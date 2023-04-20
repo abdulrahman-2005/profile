@@ -70,7 +70,7 @@ function toggleTheme() {
   setTheme(theme);
 }
 
-function setJokeMessage() {
+function JokeMessage() {
   const language = myWebsiteStorage.get().language;
   const joke = language === 'en' ? englishJokeMessages[Math.floor(Math.random() * englishJokeMessages.length)] : arabicJokeMessages[Math.floor(Math.random() * arabicJokeMessages.length)];
   const old = containerEl.innerHTML;
