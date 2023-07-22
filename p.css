@@ -87,13 +87,12 @@ nav {
 }
 
 [data-theme="light"] {
-	--primary: #fdfdfd !important;
-	--primary-hover: #902565 !important;
-	--primary-focus: #f200ff !important;
-	--primary-inverse: rgb(0, 0, 0) !important;
-	--background-color: #D770AD !important;
+	--primary: #000000 !important;
+	--primary-hover: #4800ff !important;
+	--primary-focus: #ffffff !important;
+	--primary-inverse: rgb(255, 255, 255) !important;
+	--background-color: #ffffff !important;
 }
-
 h1, h2, h3, h4, h5, h6 {
 	margin: 1rem;
 }
