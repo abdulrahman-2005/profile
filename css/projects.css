@@ -132,4 +132,9 @@ details p {
     #projectsContainer {
         grid-template-columns: 100%;
     }
+
+	.flexButtonContainer {
+		gap: 10px;
+	}
+
 }
