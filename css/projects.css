@@ -137,4 +137,12 @@ details p {
 		gap: 10px;
 	}
 
+	.img-container {
+		height: 100%;
+	}
+
+	.img-container img {
+		height: 100%;
+	}
+
 }
