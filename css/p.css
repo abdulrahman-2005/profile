@@ -86,13 +86,6 @@ nav {
 	--background-color: rgb(105, 0, 170) !important;
 }
 
-[data-theme="light"] {
-	--primary: #000000 !important;
-	--primary-hover: #4800ff !important;
-	--primary-focus: #ffffff !important;
-	--primary-inverse: rgb(255, 255, 255) !important;
-	--background-color: #ffffff !important;
-}
 h1, h2, h3, h4, h5, h6 {
 	margin: 1rem;
 }

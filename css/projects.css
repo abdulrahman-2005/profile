@@ -21,6 +21,7 @@ nav {
 
 #projectsContainer {
 	grid-template-columns: repeat(2, auto);
+	grid-auto-flow: dense !important;
 	padding: 20px;
 }
 
@@ -41,7 +42,7 @@ nav {
 	--primary-hover: #40009b;
 	--primary-focus: #6a00ff;
 	--primary-inverse: #fff;
-	--background-color: rgb(96, 0, 156);
+	--background-color: rgba(96, 0, 156, 0.414);
 }
 
 .flexButtonContainer {
@@ -49,8 +50,32 @@ nav {
 	gap: 1vw;
 }
 
+.flexButtonContainer a {
+	background: rgba(255, 255, 255, 0.6);
+	outline: none;
+	border: none;
+	box-shadow: 5px 5px 0 1px white;
+	transition: .4s;
+}
+.flexButtonContainer a:hover, .flexButtonContainer a:focus {
+	transform: translate(5px, 5px);
+	box-shadow: none;
+}
+.flexButtonContainer a {
+	background: rgba(96, 0, 156, 0.366);
+}
+
+details:focus {
+	color: white;
+}
+
 details summary {
 	user-select: none;
+	mix-blend-mode: multiply;
+}
+
+details p {
+	mix-blend-mode: exclusion;
 }
 
 .header {
@@ -61,6 +86,9 @@ details summary {
 
 .header h2 {
 	width: 70%;
+	mix-blend-mode: exclusion;
+	font-family: fantasy;
+	font-size: 3rem;
 }
 
 .header .img-container {
@@ -89,6 +117,15 @@ details summary {
 	border-radius: 30px;
 	width: 100%;
 	box-shadow: 5px 5px 0 1px black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: fit-content;
+	transition: .4s;
+}
+
+.project-card:hover {
+	transform: translate(5px, 5px);
+	box-shadow: none;
 }
 
 @media only screen and (max-width: 655px) {

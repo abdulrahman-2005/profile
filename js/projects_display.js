@@ -1,30 +1,36 @@
-const projectsListContainer = document.getElementById("projectsContainer")
+const projectsListContainer = document.getElementById("projectsContainer");
 
-
-let lang = myWebsiteStorage.get()["language"]
-let data = DATA[lang]
+let lang = myWebsiteStorage.get()["language"];
+let data = DATA[lang];
 
 let displayTitles = {
 	en: {
-		"desc": "description",
-		"code": "code",
-		"visit": "visit"
+		desc: "description",
+		code: "code",
+		visit: "visit",
 	},
 	ar: {
-		"desc": "الوصف",
-		"code": "الكود",
-		"visit": "زيارة"
-	}
-}[lang]
+		desc: "الوصف",
+		code: "الكود",
+		visit: "زيارة",
+	},
+}[lang];
 
-
+const numberOfBGS = 12
+let created = [];
 function randomBGImage() {
-	return `bg${Math.floor(Math.random() * 8)+1}.svg`
+	let randomNumber = Math.floor(Math.random() * (numberOfBGS-1))+1;
+	while (created.includes(randomNumber)) {
+		randomNumber = Math.floor(Math.random() * (numberOfBGS-1))+1;
+		if (created.length >= numberOfBGS) break;
+	}
+	created.push(randomNumber)
+	return `bg${randomNumber}.svg`;
 }
 
 function displayProject(project) {
-    projectsListContainer.innerHTML += `
-    <article class="project-card" style="background-image: url('../../data/images/${randomBGImage()}');">
+	projectsListContainer.innerHTML += `
+    <article class="project-card" style="background-image: url('../../data/images/bgs/${randomBGImage()}');">
 				<div class="header">
 					<h2>${project["name"]}</h2>
 					<div class="img-container" >
@@ -40,19 +46,20 @@ function displayProject(project) {
 				<div class="flexButtonContainer">
 					<a target=_blank href="${project["url"]}" role="button"
 						style="width: 100%">${displayTitles["visit"]}</a>
-					<a target=_blank href="https://www.github.com/abdulrahman-2005/${project[" github_repo"]}"
+					<a target=_blank href="https://www.github.com/abdulrahman-2005/${
+						project[" github_repo"]
+					}"
 						role="button" style="width: 100%">${displayTitles["code"]}</a>
 				</div>
 			</article>
-            `
+            `;
 }
 
 function displayProjects(data) {
-    projectsListContainer.innerHTML = ""
-    for (project of data) {
-        displayProject(project)
-    }
+	projectsListContainer.innerHTML = "";
+	for (project of data) {
+		displayProject(project);
+	}
 }
 
-
-displayProjects(data)
+displayProjects(data);

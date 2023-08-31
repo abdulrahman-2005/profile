@@ -334,14 +334,6 @@ button:focus {
 	--background-color: rgb(105, 0, 170) !important;
 }
 
-[data-theme="light"] {
-	--primary: #000000 !important;
-	--primary-hover: #4800ff !important;
-	--primary-focus: #ffffff !important;
-	--primary-inverse: rgb(255, 255, 255) !important;
-	--background-color: #ffffff !important;
-}
-
 kbd {
 	display: flex;
 	justify-content: center;
