@@ -11,14 +11,18 @@ nav {
 }
 
 #message {
-    height: 200px;
-    resize: none;
+	height: 200px;
+	resize: none;
 }
 
 #changeThemeButton {
 	border-radius: 20px;
 }
 
+#projectsContainer {
+	grid-template-columns: repeat(2, auto);
+	padding: 20px;
+}
 
 /* Pink Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
@@ -28,15 +32,16 @@ nav {
 		--primary-hover: #40009b;
 		--primary-focus: #6a00ff;
 		--primary-inverse: #fff;
-        --background-color: rgb(105, 0, 170);
+		--background-color: rgb(105, 0, 170);
 	}
 }
+
 [data-theme="dark"] {
 	--primary: #1e0048;
 	--primary-hover: #40009b;
 	--primary-focus: #6a00ff;
 	--primary-inverse: #fff;
-    --background-color: rgb(96, 0, 156);
+	--background-color: rgb(96, 0, 156);
 }
 
 .flexButtonContainer {
@@ -46,4 +51,48 @@ nav {
 
 details summary {
 	user-select: none;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+.header h2 {
+	width: 70%;
+}
+
+.header .img-container {
+	height: 50%;
+	width: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 40px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-container img {
+	height: 60%;
+	width: 70%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 40px;
+	margin: 0;
+}
+
+.project-card {
+	padding: 30px;
+	border-radius: 30px;
+	width: 100%;
+	box-shadow: 5px 5px 0 1px black;
+}
+
+@media only screen and (max-width: 655px) {
+    #projectsContainer {
+        grid-template-columns: 100%;
+    }
 }
