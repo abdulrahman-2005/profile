@@ -36,12 +36,12 @@ const DATA = {
 			url: "https://loquacious-chimera-3f1736.netlify.app",
 			github_repo: "id-formalizer",
 		},
-		{
-			name: "Site Builder",
-			desc: "you get some modetn curvy styling ideas automatically",
-			url: "./notPublished.html",
-			github_repo: null,
-		},
+		// {
+		// 	name: "Site Builder",
+		// 	desc: "you get some modetn curvy styling ideas automatically",
+		// 	url: "./notPublished.html",
+		// 	github_repo: null,
+		// },
 		{
 			name: "Chessy Loo",
 			desc: "a shitty site to play chess (with yourself)",
@@ -98,12 +98,12 @@ const DATA = {
 			url: "https://loquacious-chimera-3f1736.netlify.app",
 			github_repo: "id-formalizer",
 		},
-		{
-			name: "Site Builder",
-			desc: "تحصل على بعض الأفكار المودرن والأنيقة للتصميم تلقائيًا",
-			url: "./notPublished.html",
-			github_repo: null,
-		},
+		// {
+		// 	name: "Site Builder",
+		// 	desc: "تحصل على بعض الأفكار المودرن والأنيقة للتصميم تلقائيًا",
+		// 	url: "./notPublished.html",
+		// 	github_repo: null,
+		// },
 		{
 			name: "Chessy Loo",
 			desc: "موقع سيء للعب الشطرنج (مع نفسك)",

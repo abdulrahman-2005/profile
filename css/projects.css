@@ -6,6 +6,14 @@
 	--primary-inverse: #fff;
 }
 
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+	.header h2 {
+		color: rgb(255, 255, 255);
+		mix-blend-mode: difference;
+	}
+}
+
 nav {
 	padding: 0vw 4vw 0vw 4vw;
 }
@@ -144,5 +152,4 @@ details p {
 	.img-container img {
 		height: 100%;
 	}
-
 }
