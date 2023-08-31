@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>شربني قهوة</title>
-    <link rel="icon" href="../../icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
-    <link rel="stylesheet" href="../../p.css" />
+    <title>The code man - buy Me Coffee</title>
+	<link rel="icon" href="../icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/pico.css" />
+    <link rel="stylesheet" href="../../css/p.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-KVBN6L8RKV');
-</script>
+        gtag('config', 'G-KVBN6L8RKV');
+    </script>
 </head>
 
 <body>
@@ -31,41 +31,41 @@
         </ul>
         <ul>
             <li>
-                <a href="./index.html" role="button" class="secondary">◀ العودة</a>
+                <button onclick="changeMode(this)" id="modeChange" data-tooltip="change mode"></button>
             </li>
+
             <li>
-                <button onclick="changeMode(this)" id="modeChange"data-tooltip="تغيير الوضع"></button>
-            </li>
-        </ul>
+                <a href="./index.html" role="button" class="secondary">◀ Back</a>
+            </li>        </ul>
     </nav>
     <div>
         <article style="
 					background-color: var(--primary);
 					color: var(--primary-inverse);
 				">
-            <h1>اعزمني على قهوة ☕☕</h1>
+            <h1>Buy Me Some Coffee ☕☕</h1>
         </article>
         <main class="grid">
             <article>
-                <h1>فنجان</h1>
+                <h1>One Cup Please</h1>
                 <h1 style="font-size: 500%">☕</h1>
-                <h4>بدون سكر</h4>
+                <h4>with no sugar</h4>
                 <button class="money" onclick="payWithPaypal(this, 0)">
                     5$
                 </button>
             </article>
             <article>
-                <h1>كنكة</h1>
+                <h1>Double</h1>
                 <h1 style="font-size: 500%">☕☕</h1>
-                <h4>قهوة سكر دايت</h4>
+                <h4>with diet sugar</h4>
                 <button class="money" onclick="payWithPaypal(this,1)">
                     10$
                 </button>
             </article>
             <article>
-                <h1>يكفيني شهر</h1>
+                <h1>Month Worth</h1>
                 <h1 style="font-size: 700%">🛢🛢</h1>
-                <h4>وه، اوعى تتهور</h4>
+                <h4>I'll freakout</h4>
                 <button class="money" onclick="payWithPaypal(this, 2)">
                     50$
                 </button>
@@ -75,8 +75,8 @@
     <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
         data-sdk-integration-source="button-factory"></script>
     <script src="./p.js"></script>
+    
     <script src="../../js/index.js"></script>
-
 </body>
 
 </html>
