@@ -8,6 +8,10 @@ nav {
 	padding: 0vw 4vw 0vw 4vw;
 }
 
+nav ul li a {
+	color: var(--primary);
+}
+
 #message {
     height: 200px;
     resize: none;

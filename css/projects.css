@@ -6,6 +6,11 @@
 	--primary-inverse: #fff;
 }
 
+
+nav ul li a {
+	color: var(--primary);
+}
+
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
 	.header h2 {

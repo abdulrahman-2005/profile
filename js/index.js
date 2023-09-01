@@ -33,8 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	langChangeButton.addEventListener("click", changeLanguage);
 });
 
+const numberOfbgs =12
 function randomBGImage() {
-	let randomNumber = Math.floor(Math.random() * (numberOfBGS - 1)) + 1;
+	let randomNumber = Math.floor(Math.random() * (numberOfbgs - 1)) + 1;
 	return `bg${randomNumber}.svg`;
 }
 
