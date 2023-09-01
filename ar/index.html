@@ -8,6 +8,7 @@
     <title>عبدالرحمن عزمي - Abu Azmy</title>
     <link rel="icon" href="../icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/pico.css" />
+    <link rel="stylesheet" href="../css/ar.css">
     <link rel="stylesheet" href="../css/style.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
     <script>
@@ -22,69 +23,36 @@
 
 <body>
     <div id="container">
-        <article id="card">
-            <nav id="header">
-                <ul>
-                    <li>
-                        <strong role="button" class="outline" style="
-									cursor: unset;
-									padding: 1vw !important;
-									color: var(--primary-inverse);
-                                    background-color: var(--primary);
-								">عن عبدالرحمن</strong>
-                    </li>
-                    <li>
-                        <button class="utilButton" onclick="changeMode(this)"data-tooltip="تغيير الوضع" id="modeChange">
-                            ☀
-                        </button>
-                    </li>
-                    <li>
-                        <button class="utilButton" onclick="changeLanguage()"data-tooltip="الانجليزية" id="langChange">
-                            En
-                        </button>
-                    </li>
-                </ul>
-                <ul class="jokeButtonsContainer">
-                    <li>
-                        <button class="jokeButton" style="background: rgb(109, 255, 109)"></button>
-                    </li>
-                    <li>
-                        <button class="jokeButton" style="background: rgb(255, 255, 65)"></button>
-                    </li>
-                    <li>
-                        <button class="jokeButton" id="red" onclick="jokeMessage()" data-tooltip="دوس بس"></button>
-                    </li>
-                </ul>
-            </nav>
-            <div id="body" class="grid">
-                <article id="profile-picture">
-                    <img src="../pro.jpg" alt="" />
-                    <h5>دي صورتي</h5>
-                </article>
-                <article id="profile-desc">
-                    <h2>مرحبا، انا عبدالرحمن</h2>
-                    <a href="./p" role="button">...اعرف المزيد</a>
-                </article>
-                <article id="profile-links" class="grid">
-                    <a target="_blank" href="https://twitter.com/Abdulra42082285" data-tooltip="twitter" role="button"
-                        class="social-link twitter"><img src="../icons/twitter.png" alt="" /></a>
-                    <a target="_blank" href="https://www.facebook.com/abdulrahman2oo5/" data-tooltip="facebook "
-                        role=" button" class="social-link facebook"><img src="../icons/facebook.png" alt="" /></a>
-                    <a target="_blank" href="https://github.com/abdulrahman-2005/" data-tooltip="github" role="button"
-                        class="social-link github"><img src="../icons/github.png" alt="" /></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/abdulrahman-azmy-1129ab212/" role="button"
-                        class="social-link linkedin" data-tooltip="linkedin"><img src="../icons/linkedin.png"
-                            alt="" /></a>
-                    <a target="_blank"
-                        href="https://wa.me/201201590033?text=hello%2C%20let%20me%20introduce%20my%20self"
-                        data-tooltip="chat on whatsapp" role="button" class="social-link whatsapp"><img
-                            src="../icons/whatsapp.png" alt="" /></a>
-                    <a target="_blank" href="https://www.reddit.com/user/AbdoAzmy" role="button" data-tooltip="reddit"
-                        class="social-link reddit"><img src="../icons/reddit.png" alt="" /></a>
-                </article>
+        <p class="title-field left-text-field">
+            مرحبا انا عبدالرحمن عزمي
+        </p>
+        <p class="title-field right-text-field">
+            مصمم مواقع من مصر🦅
+        </p>
+        <div id="card">
+            <button
+                class="flying-button mode-flying-button"
+                id="mode-change-button"
+            >
+                ☀
+            </button>
+            <button
+                class="flying-button lang-flying-button"
+                id="lang-change-button"
+            >
+                En
+            </button>
+
+            <!-- <img class="bg-image" src="../data/images/profile.jpg" alt="my profile picture"> -->
+
+            <div class="button-container">
+                <button>
+                    <a href="./p/">اعرف المزيد</a>
+                </button>
             </div>
-        </article>
+        </div>
     </div>
+    <script src="../js/page_init.js"></script>
     <script src="../js/index.js"></script>
 </body>
 

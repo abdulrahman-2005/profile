@@ -2,86 +2,53 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abu Azmy</title>
-    <link rel="icon" href="../icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/pico.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Abu Azmy</title>
+	<link rel="icon" href="../icon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="../css/pico.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
 
-        gtag("config", "G-KVBN6L8RKV");
-    </script>
-    
+		gtag("config", "G-KVBN6L8RKV");
+	</script>
 </head>
 
 <body>
-    <div id="container">
-        <article id="card">
-            <nav id="header">
-                <ul>
-                    <li><strong role="button" class="outline" style="
-                        cursor: unset;
-                        padding: 1vw !important;
-                        color: var(--primary-inverse);
-                        background-color: var(--primary);
-                    ">About Abdo</strong>
-                    </li>
-                    <li>
-                        <button class="utilButton" onclick="changeMode(this)" id="modeChange">☀</button>
-                    </li>
-                        <button class="utilButton" onclick="changeLanguage()" id="langChange" data-tooltip="arabic">Ar</button>
-                </ul>
-                <ul class="jokeButtonsContainer">
-                    <li>
-                        <button class="jokeButton" style="background: rgb(109, 255, 109)"></button>
-                    </li>
-                    <li>
-                        <button class="jokeButton" style="background: rgb(255, 255, 65)"></button>
-                    </li>
-                    <li>
-                        <button onclick="jokeMessage()" class="jokeButton" id="red"></button>
-                    </li>
-                </ul>
-            </nav>
-            <div id="body" class="grid">
-                <article id="profile-picture">
-                    <img src="../pro.jpg" alt="" />
-                    <h5>That's me</h5>
-                </article>
-                <article id="profile-desc">
-                    <h2>Hi, This is Abdulrahman</h2>
-                    <a href="./p" role="button">Learn More...</a>
-                </article>
-                <article id="profile-links" class="grid">
-                    <a target="_blank" href="https://twitter.com/Abdulra42082285" data-tooltip="twitter" role="button"
-                        class="social-link twitter"><img src="../icons/twitter.png" alt="" /></a>
-                    <a target="_blank" href="https://www.facebook.com/abdulrahman2oo5/" data-tooltip="facebook "
-                        role=" button" class="social-link facebook"><img src="../icons/facebook.png" alt="" /></a>
-                    <a target="_blank" href="https://github.com/abdulrahman-2005/" data-tooltip="github" role="button"
-                        class="social-link github"><img src="../icons/github.png" alt="" /></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/abdulrahman-azmy-1129ab212/" role="button"
-                        class="social-link linkedin" data-tooltip="linkedin"><img src="../icons/linkedin.png"
-                            alt="" /></a>
-                    <a target="_blank"
-                        href="https://wa.me/201201590033?text=hello%2C%20let%20me%20introduce%20my%20self"
-                        data-tooltip="chat on whatsapp" role="button" class="social-link whatsapp"><img
-                            src="../icons/whatsapp.png" alt="" /></a>
-                    <a target="_blank" href="https://www.reddit.com/user/AbdoAzmy" role="button" data-tooltip="reddit"
-                        class="social-link reddit"><img src="../icons/reddit.png" alt="" /></a>
-                </article>
-            </div>
-        </article>
-    </div>
-    <script src="../js/index.js"></script>
+	<div id="container">
+		<p class="title-field left-text-field">
+			HI THIS IS <br />ABDULRAHMAN AZMY
+		</p>
+		<p class="title-field right-text-field">
+			A WEB DEVELOPER FROM EGYPT🦅
+		</p>
+		<div id="card">
+			<button class="flying-button mode-flying-button" id="mode-change-button">
+				☀
+			</button>
+			<button class="flying-button lang-flying-button" id="lang-change-button">
+				Ar
+			</button>
+
+			<!-- <img class="bg-image" src="../data/images/profile.jpg" alt="my profile picture"> -->
+
+			<div class="button-container">
+				<button>
+					<a href="./p/">Learn More</a>
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="../js/page_init.js"></script>
+	<script src="../js/index.js"></script>
 </body>
 
 </html>

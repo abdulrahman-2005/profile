@@ -8,6 +8,7 @@
     <title>تواصل معي - عبدالرحمن عزمي</title>
     <link rel="icon" href="../../icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/pico.css" />
+    <link rel="stylesheet" href="../../css/ar.css" />
     <link rel="stylesheet" href="../../css/p.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
     <script>
@@ -36,7 +37,7 @@
                 <a href="./index.html" role="button" class="secondary">◀ العودة</a>
             </li>
             <li>
-                <button onclick="changeMode(this)" id="modeChange" data-tooltip="تغيير الوضع"></button>
+                <button id="mode-change-button">☀</button>
             </li>
         </ul>
     </nav>
@@ -50,16 +51,21 @@
         </article>
         <main class="container" id="contactContainer">
             <textarea name="message" id="message-textarea" placeholder="رسالتك"></textarea>
-            <button class="whatsapp box-shadow-hover" onclick="sendMessage()">ارسال على واتساب</button>
-            
+            <button class="whatsapp box-shadow-hover" onclick="sendMessage()">
+                ارسال على واتساب
+            </button>
+
             <h3>او تواصل معي على</h3>
             <article>
-                <a role="button" target="_blank" class="messenger box-shadow-hover" href="https://www.messenger.com/t/100033968274050">ماسنجر</a>
-                <a role="button" target="_blank" class="telegram box-shadow-hover" href="https://t.me/+201099417149">تيليجرام</a>
+                <a role="button" target="_blank" class="messenger box-shadow-hover"
+                    href="https://www.messenger.com/t/100033968274050">ماسنجر</a>
+                <a role="button" target="_blank" class="telegram box-shadow-hover"
+                    href="https://t.me/+201099417149">تيليجرام</a>
             </article>
-            </main>
+        </main>
     </div>
     <script src="./p.js"></script>
+    <script src="../../js/page_init.js"></script>
     <script src="../../js/index.js"></script>
 </body>
 

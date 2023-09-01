@@ -8,15 +8,18 @@
     <title>شربني قهوة</title>
     <link rel="icon" href="../../icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/pico.css" />
+    <link rel="stylesheet" href="../../css/ar.css" />
     <link rel="stylesheet" href="../../css/p.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-  gtag('config', 'G-KVBN6L8RKV');
-</script>
+        gtag("config", "G-KVBN6L8RKV");
+    </script>
 </head>
 
 <body>
@@ -34,7 +37,7 @@
                 <a href="./index.html" role="button" class="secondary">◀ العودة</a>
             </li>
             <li>
-                <button onclick="changeMode(this)" id="modeChange"data-tooltip="تغيير الوضع"></button>
+                <button id="mode-change-button">☀</button>
             </li>
         </ul>
     </nav>
@@ -75,8 +78,8 @@
     <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
         data-sdk-integration-source="button-factory"></script>
     <script src="./p.js"></script>
+    <script src="../../js/page_init.js"></script>
     <script src="../../js/index.js"></script>
-
 </body>
 
 </html>

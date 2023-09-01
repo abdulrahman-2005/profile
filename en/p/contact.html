@@ -6,51 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me</title>
-	<link rel="icon" href="../icon.png" type="image/x-icon" />
+    <link rel="icon" href="../icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/pico.css" />
     <link rel="stylesheet" href="../../css/p.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-        gtag('config', 'G-KVBN6L8RKV');
+        gtag("config", "G-KVBN6L8RKV");
     </script>
 </head>
 
 <body>
     <nav>
         <ul>
-            <li style="border: 2px solid var(--primary); border-radius: 12px"><strong>Abu Azmy</strong></li>
+            <li style="
+						border: 2px solid var(--primary);
+						border-radius: 12px;
+					">
+                <strong>Abu Azmy</strong>
+            </li>
         </ul>
         <ul>
-
             <li>
                 <a href="./index.html" role="button" class="secondary">◀ Back</a>
-            </li>            <li>
-                <button onclick="changeMode(this)" id="modeChange"></button>
+            </li>
+            <li>
+                <button id="mode-change-button">☀</button>
             </li>
         </ul>
     </nav>
     <div>
-        <article style="background-color: var(--primary); color: var(--primary-inverse)">
+        <article style="
+					background-color: var(--primary);
+					color: var(--primary-inverse);
+				">
             <h1>Contact - <kbd>Abdulrahman Azmy</kbd></h1>
             <h4>abuazmy.gg@gmail.com</h4>
         </article>
-        
+
         <main class="container" id="contactContainer">
-            <textarea name="message" id="message-textarea" placeholder="type your message, or just click the button"></textarea>
-            <button class="whatsapp" onclick="sendMessage()">Send On Whatsapp</button>
-        
+            <textarea name="message" id="message-textarea"
+                placeholder="type your message, or just click the button"></textarea>
+            <button class="whatsapp" onclick="sendMessage()">
+                Send On Whatsapp
+            </button>
+
             <h3>or message me over</h3>
             <article>
-                <a role="button" target="_blank" class="messenger box-shadow-hover" href="https://www.messenger.com/t/100033968274050">Messenger</a>
-                <a role="button" target="_blank" class="telegram box-shadow-hover" href="https://t.me/+201099417149">Telegram</a>
+                <a role="button" target="_blank" class="messenger box-shadow-hover"
+                    href="https://www.messenger.com/t/100033968274050">Messenger</a>
+                <a role="button" target="_blank" class="telegram box-shadow-hover"
+                    href="https://t.me/+201099417149">Telegram</a>
             </article>
         </main>
     </div>
     <script src="./p.js"></script>
+	<script src="../../js/page_init.js"></script>
     <script src="../../js/index.js"></script>
 </body>
 

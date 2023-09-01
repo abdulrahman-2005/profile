@@ -32,7 +32,7 @@ function displayProject(project) {
 	projectsListContainer.innerHTML += `
     <article class="project-card" style="background-image: url('../../data/images/bgs/${randomBGImage()}');">
 				<div class="header">
-					<h2>${project["name"]}</h2>
+					<h2 style="font-family: Arial, Helvetica, sans-serif !important">${project["name"]}</h2>
 					<div class="img-container" >
 						<img src="../../data/images/${project["github_repo"]}.jpg">
 					</div>

@@ -12,10 +12,12 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVBN6L8RKV"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
 
-		gtag('config', 'G-KVBN6L8RKV');
+		gtag("config", "G-KVBN6L8RKV");
 	</script>
 </head>
 
@@ -34,7 +36,7 @@
 				<a href="../p/index.html" role="button" class="secondary">◀ Back</a>
 			</li>
 			<li>
-				<button onclick="changeMode(this)" id="modeChange"></button>
+				<button id="mode-change-button">☀</button>
 			</li>
 		</ul>
 	</nav>
@@ -45,12 +47,10 @@
 				">
 			<h1>Projects - <kbd>Abdulrahman Azmy</kbd></h1>
 		</article>
-		<main class="grid" id="projectsContainer">
-			
-		</main>
+		<main class="grid" id="projectsContainer"></main>
 	</div>
-	<script src="../../wavery/wavery.min.js"></script>
-	<script src="../../data/projects.js"></script>
+	<script src="../../data/projects.data.js"></script>
+	<script src="../../js/page_init.js"></script>
 	<script src="../../js/index.js"></script>
 	<script src="../../js/projects_display.js"></script>
 </body>
