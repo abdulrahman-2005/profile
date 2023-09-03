@@ -220,6 +220,12 @@ button a {
 	}
 }
 
+#extra-space h1 {
+	background-color: transparent;
+	color: white;
+	mix-blend-mode: difference;
+}
+
 .flex-center {
 	display: flex;
 	justify-content: center;
@@ -289,7 +295,7 @@ footer {
 	align-items: center;
 	border-radius: 100px;
 	background-color: var(--primary-inverse);
-	color: var(--primary-focus);
+	color: var(--primary);
 	padding: 10px;
 	font-family: monospace;
 }
