@@ -1,4 +1,5 @@
 const container = document.querySelector("#container");
+const extraSpace = document.querySelector("#extra-space")
 const langChangeButton = document.getElementById("lang-change-button");
 
 function changeLanguage() {
@@ -41,6 +42,9 @@ function randomBGImage() {
 
 function changeBG() {
 	container.style[
+		"background-image"
+	] = `url(../data/images/bgs/${randomBGImage()})`;
+	extraSpace.style[
 		"background-image"
 	] = `url(../data/images/bgs/${randomBGImage()})`;
 }
