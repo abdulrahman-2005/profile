@@ -137,7 +137,6 @@ button a {
 .left-text-field {
 	left: 5vw;
 	top: 15vh;
-	
 }
 
 .flying-button {
@@ -168,6 +167,10 @@ button a {
 }
 
 @media only screen and (max-width: 555px) {
+	* {
+		user-select: none !important;
+	}
+
 	#card {
 		width: 80%;
 	}
@@ -184,11 +187,15 @@ button a {
 	}
 
 	footer {
-		font-size: .5rem;
+		font-size: 0.5rem;
 	}
 }
 
 @media only screen and (min-width: 555px) and (max-width: 800px) {
+	* {
+		user-select: none !important;
+	}
+
 	#card {
 		width: 60%;
 	}
@@ -198,9 +205,9 @@ button a {
 		font-size: 2rem;
 		width: 25%;
 	}
-	
+
 	footer {
-		font-size: .7rem;
+		font-size: 0.7rem;
 	}
 }
 
@@ -302,7 +309,7 @@ footer {
 
 @keyframes breathing {
 	50% {
-		transform: scale(.9);
+		transform: scale(0.9);
 	}
 
 	100% {
@@ -316,9 +323,7 @@ footer {
 	}
 }
 
-
-
-html[dir=rtl] {
+html[dir="rtl"] {
 	.right-text-field {
 		right: 5vw;
 	}
