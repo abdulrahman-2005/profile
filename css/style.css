@@ -164,7 +164,7 @@ button a {
 .lang-flying-button {
 	top: 25px;
 	right: 25px;
-	font-family: monospace;
+	font-family: monospace !important;
 }
 
 @media only screen and (max-width: 555px) {
