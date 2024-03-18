@@ -1,0 +1,49 @@
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container div {
+    text-align: center;
+}
+
+#container div a {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+#container div a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.wrapper-div {
+    border: 5px solid var(--primary);
+    padding: 1vw;
+    border-radius: 40px;
+}
+
+.choice-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-row {
+    padding: 1vw;
+}
+
+input {
+    border-radius: 40px;
+    margin: 0;
+}
