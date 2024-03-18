@@ -41,9 +41,20 @@
 
 .choice-row {
     padding: 1vw;
+    width: 100%;
 }
 
-input {
-    border-radius: 40px;
-    margin: 0;
+.choices-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    gap: 1vw;
 }
+
+.choice-row input, .choice-row button {
+    border-radius: 40px;
+    margin: 0 !important;
+}
+
