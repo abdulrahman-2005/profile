@@ -33,10 +33,10 @@
 .choice-row {
     display: flex;
     flex-direction: row;
-    gap: 1vw;
-    height: 10vh;
     justify-content: center;
     align-items: center;
+    gap: 1vw;
+    height: 10vh;
 }
 
 .choice-row {
