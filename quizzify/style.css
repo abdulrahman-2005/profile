@@ -28,6 +28,12 @@
     border: 5px solid var(--primary);
     padding: 1vw;
     border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
 }
 
 .choice-row {
@@ -50,11 +56,13 @@
     justify-content: center;
     align-items: center;
     padding: 1vw;
-    gap: 1vw;
+    gap: 10px;
 }
 
-.choice-row input, .choice-row button {
+input, .choice-row button {
     border-radius: 40px;
     margin: 0 !important;
 }
+
+
 
