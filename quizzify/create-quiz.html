@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/pico.css">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div id="container">
         <div class="wrapper-div">
@@ -14,26 +16,130 @@
             <div class="wrapper-div" style="height: 80vh;">
                 <input type="text" id="question" placeholder="The Question">
                 <div class="choices-wrapper">
-                    <div class="choice-row" >
-                        <input type="text" placeholder="choice 1" id="c1">
-                        <input type="text" placeholder="choice 2" id="c2">
-                    </div>
-                    <div class="choice-row" >
-                        <input type="text" placeholder="choice 3" id="c3">
-                        <input type="text" placeholder="choice 4" id="c4">
+                    <div class="choice-row">
+                        <input type="text" placeholder="choice 1" id="c1" class="mcqc " onclick="selectCorrectChoiceFor(this)">
+                        <input type="text" placeholder="choice 2" id="c2" class="mcqc " onclick="selectCorrectChoiceFor(this)">
                     </div>
                     <div class="choice-row">
-                        <input type="text" placeholder="choice 5" id="c5">
-                        <input type="text" placeholder="choice 6" id="c6">
+                        <input type="text" placeholder="choice 3" id="c3" class="mcqc " onclick="selectCorrectChoiceFor(this)">
+                        <input type="text" placeholder="choice 4" id="c4" class="mcqc " onclick="selectCorrectChoiceFor(this)">
                     </div>
                     <div class="choice-row">
-                        <button>back⬅</button>
-                        <button>save💾</button>
-                        <button>next➡</button>
+                        <input type="text" placeholder="choice 5" id="c5" class="mcqc " onclick="selectCorrectChoiceFor(this)">
+                        <input type="text" placeholder="choice 6" id="c6" class="mcqc " onclick="selectCorrectChoiceFor(this)">
+                    </div>
+                    <div class="choice-row">
+                        <button onclick="back()">back⬅</button>
+                        <button onclick="save()">save💾</button>
+                        <button onclick="next()">next➡</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        let quiz = [];
+        let state = "fillingQuestion&Quizzes"
+        let questionEl = document.getElementById('question');
+        let c1El = document.getElementById('c1');
+        let c2El = document.getElementById('c2');
+        let c3El = document.getElementById('c3');
+        let c4El = document.getElementById('c4');
+        let c5El = document.getElementById('c5');
+        let c6El = document.getElementById('c6');
+        let correctAnswerValue = ""
+        let correctAnswerElement = null
+
+        function selectCorrectChoiceFor(inputElement) {
+            if (state !== "selectingCorrectAnswer") return;
+            if (inputElement.value !== "") {
+                console.log("triggered")
+                c1ClickSelectionState = inputElement.addEventListener('click', () => {
+                    if (inputElement.classList.contains("correct-answer-selected")) return;
+                    inputElement.classList.add("correct-answer-selected");
+                    correctAnswerValue = inputElement.value;
+                    if (correctAnswerElement !== null) correctAnswerElement.classList.remove("correct-answer-selected")
+                    correctAnswerElement = inputElement;
+                })
+            }
+        }
+
+        function selectingCorrectChoiceState() {
+            if (c1El.value !== "") {
+                c1El.classList.add("correct-answer-selection-mode");
+                c1El.setAttribute("readonly", true);
+            }
+            if (c2El.value !== "") {
+                c2El.classList.add("correct-answer-selection-mode");
+                c2El.setAttribute("readonly", true);
+            }
+            if (c3El.value !== "") {
+                c3El.classList.add("correct-answer-selection-mode");
+                c3El.setAttribute("readonly", true);
+            }
+            if (c4El.value !== "") {
+                c4El.classList.add("correct-answer-selection-mode");
+                c4El.setAttribute("readonly", true);
+            }
+            if (c5El.value !== "") {
+                c5El.classList.add("correct-answer-selection-mode");
+                c5El.setAttribute("readonly", true);
+            }
+
+            if (c6El.value !== "") {
+                c6El.classList.add("correct-answer-selection-mode");
+                c6El.setAttribute("readonly", true);
+            }
+        }
+
+        function revertSelectingCorrectChoiceState() {
+            c1El.classList.remove("correct-answer-selection-mode");
+            c2El.classList.remove("correct-answer-selection-mode");
+            c3El.classList.remove("correct-answer-selection-mode");
+            c4El.classList.remove("correct-answer-selection-mode");
+            c5El.classList.remove("correct-answer-selection-mode");
+            c6El.classList.remove("correct-answer-selection-mode");
+
+            correctAnswerValue = ""
+            correctAnswerElement.classList.remove("correct-answer-selected")
+            correctAnswerElement = null
+        }
+
+        function next() {
+            let question = questionEl.value;
+            let choices = [c1El.value, c2El.value, c3El.value, c4El.value, c5El.value, c6El.value];
+            let valuesChoices = choices.filter(choice => choice !== '');
+            if (state === "fillingQuestion&Quizzes") {
+                if (question !== '' && valuesChoices.length > 3 && new Set(valuesChoices).size === valuesChoices.length) {
+                    state = "selectingCorrectAnswer";
+                    selectingCorrectChoiceState();
+                } else {
+                    alert('Please fill in the question and at least 4 choices and no repeated choices');
+                }
+            }
+
+            else if (state === "selectingCorrectAnswer") {
+                if (!correctAnswerValue) {
+                    alert('Please select the correct answer');
+                } else {
+                    let finalChoices = choices.filter(choice => { choice !== '' });
+                    quiz.push({ question, choices: finalChoices, correctAnswer: correctAnswerValue });
+                    questionEl.value = '';
+                    c1El.value = '';
+                    c2El.value = '';
+                    c3El.value = '';
+                    c4El.value = '';
+                    c5El.value = '';
+                    c6El.value = '';
+                    revertSelectingCorrectChoiceState();
+                    state = "fillingQuestion&Quizzes";
+                }
+
+            }
+        }
+
+
+    </script>
 </body>
+
 </html>

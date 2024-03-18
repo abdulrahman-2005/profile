@@ -65,7 +65,22 @@
 input, .choice-row button {
     border-radius: 40px;
     margin: 0 !important;
+    user-select: none;
 }
 
+.correct-answer-selection-mode {
+    border: 5px dotted yellow;
+    cursor: pointer;
+}
 
+.correct-answer-selection-mode:hover {
+    border: 5px solid yellow;
+}
 
+.correct-answer-selected {
+    border: 5px solid green;
+}
+
+.correct-answer-selected:hover {
+    border: 5px solid green;
+}
