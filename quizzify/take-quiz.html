@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzify - Take A Quiz</title>
     <link rel="stylesheet" href="../css/pico.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="./main.js"></script>
 </head>
+
 <body>
     <div id="container">
-
+        <div class="wrapper-div">
+            <h1>Quizzify</h1>
+            <div>
+                <p>Pick a Quiz</p>
+                <select name="quiz" id="quizSelection"></select>
+                <button>start Quiz</button>
+            </div>
+        </div>
     </div>
+    <script>
+        const lsData = getLocalStorage();
+        const quizSelect = document.getElementById('quizSelection');
+
+        for (let i = 0; i<lsData.labels.length; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = lsData.labels[i];
+            quizSelect.appendChild(option);
+        }
+    </script>
 </body>
+
 </html>

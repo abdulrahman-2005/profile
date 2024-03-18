@@ -8,7 +8,7 @@ function initLocalStorage() {
     if (localStorage.getItem(__LOCAL_STORAGE_KEY) === null) {
         localStorage.setItem(__LOCAL_STORAGE_KEY, JSON.stringify({
             quizzes: [],
-            currentQuiz: null,
+            labels: [],
         }));
     }
 }
@@ -25,27 +25,11 @@ function getQuizzes() {
     return getLocalStorage().quizzes;
 }
 
-function getCurrentQuiz() {
-    const storage = getLocalStorage();
-    if (storage.currentQuiz === null) {
-        return null;
-    }
-    return storage.quizzes[storage.currentQuiz];
-}
-
-function setCurrentQuiz(index) {
-    const storage = getLocalStorage();
-    storage.currentQuiz = index;
-    setLocalStorage(storage);
-}
-
-
-function addQuiz(quiz) {
+function addQuiz(quizLabel, quiz) {
     const storage = getLocalStorage();
     storage.quizzes.push(quiz);
+    storage.labels.push(quizLabel);
     setLocalStorage(storage);
 }
-
-
 
 initLocalStorage();
