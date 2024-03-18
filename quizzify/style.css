@@ -86,3 +86,7 @@ input, .choice-row button {
 .correct-answer-selected:hover {
     border: 5px solid green;
 }
+
+.hidden {
+    display: none;
+}

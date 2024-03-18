@@ -13,24 +13,85 @@
 <body>
     <div id="container">
         <div class="wrapper-div">
+            <div id="pickingQuiz">
             <h1>Quizzify</h1>
-            <div>
                 <p>Pick a Quiz</p>
                 <select name="quiz" id="quizSelection"></select>
-                <button>start Quiz</button>
+                <button onclick="start()">start Quiz</button>
+            </div>
+            <div id="quizBody" class="hidden">
+                <input type="text" id="question" placeholder="The Question" class="hidden">
+                <div class="choices-wrapper">
+                    <div class="choice-row">
+                        <button class="hidden" id="bs1" onclick="AnswerSelect(this)"></button>
+                        <button class="hidden" id="bs2" onclick="AnswerSelect(this)"></button>
+                    </div>
+                    <div class="choice-row">
+                        <button class="hidden" id="bs3" onclick="AnswerSelect(this)"></button>
+                        <button class="hidden" id="bs4" onclick="AnswerSelect(this)"></button>
+                    </div>
+                    <div class="choice-row">
+                        <button class="hidden" id="bs5" onclick="AnswerSelect(this)"></button>
+                        <button class="hidden" id="bs6" onclick="AnswerSelect(this)"></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script>
         const lsData = getLocalStorage();
         const quizSelect = document.getElementById('quizSelection');
-
-        for (let i = 0; i<lsData.labels.length; i++) {
+        let currentQuiz = null;
+        let currentQuizLabel = null;
+        for (let i = 0; i < lsData.labels.length; i++) {
             const option = document.createElement('option');
             option.value = i;
             option.textContent = lsData.labels[i];
             quizSelect.appendChild(option);
         }
+
+        function start() {
+            currentQuiz = lsData.quizzes[quizSelect.value];
+            currentQuizLabel = lsData.labels[quizSelect.value];
+            document.getElementById('pickingQuiz').classList.add('hidden');
+            document.getElementById('quizBody').classList.remove('hidden');
+            next();
+        }
+
+
+        let currentQuestion = 0
+        let questionEl = document.getElementById('question');
+        let button1 = document.getElementById('bs1');
+        let button2 = document.getElementById('bs2');
+        let button3 = document.getElementById('bs3');
+        let button4 = document.getElementById('bs4');
+        let button5 = document.getElementById('bs5');
+        let button6 = document.getElementById('bs6');
+        let buttons = [button1, button2, button3, button4, button5, button6];
+
+        function next() {
+            if (currentQuestion >= currentQuiz.length) {
+                alert('Quiz Over');
+                return;
+            }
+            questionEl.classList.remove('hidden');
+            questionEl.value = currentQuiz[currentQuestion].question;
+            for (let i = 0; i < currentQuiz[currentQuestion].choices.length; i++) {
+                buttons[i].classList.remove('hidden');
+                buttons[i].textContent = currentQuiz[currentQuestion].choices[i];
+            }
+            currentQuestion++;
+        }
+
+        function hideButtons() {
+            for (let i = 0; i < buttons.length; i++) {
+                if (!buttons[i].classList.contains('hidden')) {
+                    buttons[i].classList.add('hidden');
+                }
+            }
+        }
+
+
     </script>
 </body>
 
