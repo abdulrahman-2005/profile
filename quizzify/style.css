@@ -90,3 +90,31 @@ input, .choice-row button {
 .hidden {
     display: none;
 }
+
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.grey {
+    color: grey;
+}
+
+.correct-answer {
+    background-color: green;
+    border: 5px solid green;
+}
+
+.wrong-answer {
+    background-color: red;
+    border: 5px solid red;
+}
+
+.correct-answer-wrong-choice {
+    background-color: green;
+    border: 5px dotted green;
+}
