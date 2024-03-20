@@ -13,9 +13,14 @@
 <body>
     <div id="container">
         <div class="wrapper-div">
+            <div class="choice-row">
+                <a style="font-size: .5rem;" role="button" href="./take-quiz.html">take quiz</a>
+                <a style="font-size: .5rem;" role="button" href="./create-quiz.html">create quiz</a>
+                <a style="font-size: .5rem;" role="button" href="./index.html">back</a>
+            </div>
             <h1 style="font-size: 1.2rem; margin-bottom: 1vw;"> Create a Quiz</h1>
             <div class="wrapper-div" style="height: 80vh;">
-                <input type="text" id="question" placeholder="The Question">
+                <input type="text" id="question" placeholder="Question 1">
                 <div class="choices-wrapper">
                     <div class="choice-row">
                         <input type="text" placeholder="choice 1" id="c1" class="mcqc "
@@ -118,6 +123,7 @@
         }
 
         function next() {
+            questionEl.setAttribute("placeholder", `Question ${currentQuestion + 1}`)
             let question = questionEl.value;
             let choices = [c1El.value, c2El.value, c3El.value, c4El.value, c5El.value, c6El.value];
             let valuesChoices = choices.filter(choice => choice !== '');
@@ -156,14 +162,14 @@
         }
 
         function back() {
-                state = "fillingQuestion&Quizzes";
-                currentQuestion--;
-                let currentQuestionData = quiz[currentQuestion];
-                questionEl.value = currentQuestionData.question;
-                let choicesElements = [c1El, c2El, c3El, c4El, c5El, c6El];
-                for (let i = 0; i < currentQuestionData.choices.length; i++) {
-                    choicesElements[i].value = currentQuestionData.choices[i];
-                }
+            state = "fillingQuestion&Quizzes";
+            currentQuestion--;
+            let currentQuestionData = quiz[currentQuestion];
+            questionEl.value = currentQuestionData.question;
+            let choicesElements = [c1El, c2El, c3El, c4El, c5El, c6El];
+            for (let i = 0; i < currentQuestionData.choices.length; i++) {
+                choicesElements[i].value = currentQuestionData.choices[i];
+            }
         }
 
         function save() {
