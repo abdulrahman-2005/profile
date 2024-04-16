@@ -1,22 +1,21 @@
-[data-theme="dark"],
-:root:not([data-theme="light"]) {
-	--primary: #7d1bd8;
-	--primary-hover: #300061;
-	--primary-focus: rgba(74, 7, 105, 0.125);
-	--primary-inverse: #fff;
-}
-
-
 nav ul li a {
 	color: var(--primary);
 }
 
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-	.header h2 {
-		color: rgb(255, 255, 255);
-		mix-blend-mode: difference;
-	}
+[data-theme="dark"] {
+	--primary: #1e88e5 !important;
+	--primary-hover: #1565c0 !important;
+	--primary-focus: #0d47a1 !important;
+	--primary-inverse: #ffffff !important;
+	--background-color: #121212 !important;
+}
+
+[data-theme="light"] {
+	--primary: #1976d2 !important;
+	--primary-hover: #2196f3 !important;
+	--primary-focus: #64b5f6 !important;
+	--primary-inverse: #000000 !important;
+	--background-color: #ffffff !important;
 }
 
 nav {
@@ -38,26 +37,6 @@ nav {
 	padding: 20px;
 }
 
-/* Pink Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-	:root:not([data-theme="light"]) {
-		--primary: #1e0048;
-		--primary-hover: #40009b;
-		--primary-focus: #6a00ff;
-		--primary-inverse: #fff;
-		--background-color: rgb(105, 0, 170);
-	}
-}
-
-[data-theme="dark"] {
-	--primary: #1e0048;
-	--primary-hover: #40009b;
-	--primary-focus: #6a00ff;
-	--primary-inverse: #fff;
-	--background-color: rgba(96, 0, 156, 0.414);
-}
-
 .flexButtonContainer {
 	display: flex;
 	gap: 1vw;
@@ -69,11 +48,15 @@ nav {
 	border: none;
 	box-shadow: 5px 5px 0 1px white;
 	transition: .4s;
+	color: white;
 }
-.flexButtonContainer a:hover, .flexButtonContainer a:focus {
+
+.flexButtonContainer a:hover,
+.flexButtonContainer a:focus {
 	transform: translate(5px, 5px);
 	box-shadow: none;
 }
+
 .flexButtonContainer a {
 	background: rgba(96, 0, 156, 0.366);
 }
@@ -84,11 +67,11 @@ details:focus {
 
 details summary {
 	user-select: none;
-	mix-blend-mode: multiply;
+	color: white !important;
 }
 
 details p {
-	mix-blend-mode: exclusion;
+	color: white !important;
 }
 
 .header {
@@ -99,9 +82,9 @@ details p {
 
 .header h2 {
 	width: 70%;
-	mix-blend-mode: exclusion;
 	font-family: fantasy;
 	font-size: 3rem;
+	color: white;
 }
 
 .header .img-container {
@@ -129,12 +112,27 @@ details p {
 	padding: 30px;
 	border-radius: 30px;
 	width: 100%;
+	height: 400px;
 	box-shadow: 5px 5px 0 1px black;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: fit-content;
 	transition: .4s;
 }
+
+[data-theme="dark"] .project-card {
+	box-shadow: 5px 5px 0 1px white;
+}
+
+[data-theme="light"] .flexButtonContainer a {
+	box-shadow: 5px 5px 0 1px black;
+}
+
+[data-theme="light"] .flexButtonContainer a:hover,
+.flexButtonContainer a:focus {
+	transform: translate(5px, 5px);
+	box-shadow: none;
+}
+
 
 .project-card:hover {
 	transform: translate(5px, 5px);
@@ -142,9 +140,9 @@ details p {
 }
 
 @media only screen and (max-width: 655px) {
-    #projectsContainer {
-        grid-template-columns: 100%;
-    }
+	#projectsContainer {
+		grid-template-columns: 100%;
+	}
 
 	.flexButtonContainer {
 		gap: 10px;

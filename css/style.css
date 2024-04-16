@@ -48,7 +48,6 @@ body {
 #card {
 	height: 90%;
 	width: 35%;
-	/* border-radius: var(--border-radius); */
 	border-radius: 150px 50px 150px 50px;
 	max-width: 100%;
 	max-height: 100%;
@@ -56,26 +55,7 @@ body {
 	background-image: url(../data/images/profile.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* box-shadow: 5px 5px 0 1px black; */
-	border: 15px solid var(--primary);
-	transition: 0.4s;
-	animation: breathing 5s ease-out infinite;
 }
-
-#card:hover {
-	transform: translate(5px, 5px);
-	box-shadow: none;
-}
-
-/* 
-.bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: var(--border-radius);
-} */
 
 .button-container {
 	width: 70%;
@@ -129,16 +109,6 @@ button a {
 	mix-blend-mode: difference;
 }
 
-.right-text-field {
-	right: 5px;
-	top: 5vh;
-}
-
-.left-text-field {
-	left: 5vw;
-	top: 15vh;
-}
-
 .flying-button {
 	height: 50px;
 	width: 50px;
@@ -157,7 +127,7 @@ button a {
 
 .mode-flying-button {
 	top: 25px;
-	left: 25px;
+	right: 85px;
 }
 
 .lang-flying-button {
@@ -212,19 +182,19 @@ button a {
 }
 
 [data-theme="dark"] {
-	--primary: #1e0048 !important;
-	--primary-hover: #40009b !important;
-	--primary-focus: #6a00ff !important;
-	--primary-inverse: #fff !important;
-	--background-color: rgb(105, 0, 170) !important;
+	--primary: #1e88e5 !important;
+	--primary-hover: #1565c0 !important;
+	--primary-focus: #0d47a1 !important;
+	--primary-inverse: #ffffff !important;
+	--background-color: #121212 !important;
 }
 
 [data-theme="light"] {
-	--background-color: rgba(233, 199, 255, 0.784) !important;
-
-	.title-field {
-		color: var(--primary);
-	}
+	--primary: #1976d2 !important;
+	--primary-hover: #2196f3 !important;
+	--primary-focus: #64b5f6 !important;
+	--primary-inverse: #000000 !important;
+	--background-color: #ffffff !important;
 }
 
 #extra-space h1 {
@@ -241,13 +211,12 @@ button a {
 
 .social-links {
 	height: 20%;
-	width: 80%;
+	width: 70%;
 	background-color: var(--primary);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 100px;
-	box-shadow: 0 0 10px 2px var(--primary-inverse);
 }
 
 .social-btn {
@@ -307,21 +276,6 @@ footer {
 	font-family: monospace;
 }
 
-@keyframes breathing {
-	50% {
-		transform: scale(0.9);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
-
-@keyframes heartbeat {
-	to {
-		transform: scale(1.4);
-	}
-}
 
 html[dir="rtl"] {
 	.right-text-field {

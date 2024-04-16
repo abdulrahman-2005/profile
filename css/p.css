@@ -80,15 +80,30 @@ nav ul li a {
 	gap: 1%
 }
 
-
-
 [data-theme="dark"] {
-	--primary: #1e0048 !important;
-	--primary-hover: #40009b !important;
-	--primary-focus: #6a00ff !important;
-	--primary-inverse: #fff !important;
-	--background-color: rgb(105, 0, 170) !important;
+	--primary: #1e88e5 !important;
+	--primary-hover: #1565c0 !important;
+	--primary-focus: #0d47a1 !important;
+	--primary-inverse: #ffffff !important;
+	--background-color: #121212 !important;
 }
+
+[data-theme="light"] {
+	--primary: #1976d2 !important;
+	--primary-hover: #2196f3 !important;
+	--primary-focus: #64b5f6 !important;
+	--primary-inverse: #000000 !important;
+	--background-color: #ffffff !important;
+}
+
+
+
+[data-theme="light"] {
+	.title-field {
+		color: var(--primary);
+	}
+}
+
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 1rem;
