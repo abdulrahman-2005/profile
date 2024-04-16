@@ -96,19 +96,22 @@ nav ul li a {
 	--background-color: #ffffff !important;
 }
 
-
-
-[data-theme="light"] {
-	.title-field {
-		color: var(--primary);
-	}
-}
-
-
 h1, h2, h3, h4, h5, h6 {
 	margin: 1rem;
 }
 
 .box-shadow-hover:hover {
 	box-shadow: 4px 4px 1px 1px black;
+}
+
+.contactinfo-article {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 5px !important;
+}
+
+.contactinfo-article * {
+	width: 50%;
 }
