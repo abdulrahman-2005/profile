@@ -63,6 +63,9 @@ body {
 	border-radius: 100%;
 }
 
+.card-title {
+	font-size: 2rem !important;
+}
 
 .button-container {
 	width: 50%;
@@ -199,177 +202,6 @@ button a {
 	font-family: monospace !important;
 }
 
-@media only screen and (max-width: 555px) {
-	* {
-		user-select: none !important;
-	}
-
-	.flying-button {
-		height: 10vw;
-		width: 10vw;
-		font-size: 4vw;
-	}
-
-	#card {
-		height: 90vw;
-		width: 90vw;
-	}
-
-	.button-container {
-		width: 100% !important;
-		height: 40% !important;
-		left: 0;
-	}
-
-	.button-container p {
-		font-size: 1rem !important;
-	}
-
-	.button-container .skill-container p {
-		font-size: 1rem !important;
-		font-size: .5rem !important;
-	}
-
-
-	.button-container button {
-		width: 70%;
-		/* border-top-right-radius: 50px; */
-	}
-
-	.button-container a {
-		font-size: 1rem;
-	}
-
-	.title-field {
-		font-size: 1rem;
-		font-weight: normal;
-		width: 10%;
-		top: 5px;
-	}
-
-	.left-text-field {
-		left: 2px;
-	}
-
-	footer {
-		font-size: 0.5rem;
-	}
-
-
-	.flying-projectile {
-		top: 70vw !important;
-		left: 35vw;
-	}
-
-	.flying-projectile-leftup {
-		transform: translate(-10vw, -40vw) rotate(-5deg) !important;
-	}
-
-	.flying-projectile-rightup {
-		transform: translate(10vw, -40vw) rotate(5deg) !important;
-	}
-
-	.flying-projectile-leftdown {
-		transform: translate(-27vw, -35vw) rotate(-20deg) !important;
-	}
-
-	.flying-projectile-rightdown {
-		transform: translate(27vw, -35vw) rotate(10deg) !important;
-	}
-
-	.social-btn {
-		cursor: pointer;
-		height: 50px !important;
-		width: 50px !important;
-		font-family: "Titillium Web", sans-serif;
-		color: #333;
-		border-radius: 10px;
-		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-		background: white;
-		margin: 5px;
-		transition: 1s;
-		padding: 5px;
-	}
-
-	.social-btn:hover {
-		width: 250px !important;
-		border-radius: 5px;
-	}
-	
-
-	#github svg {
-		scale: 1 !important;
-	}
-}
-
-@media only screen and (min-width: 555px) and (max-width: 1000px) {
-	* {
-		user-select: none !important;
-	}
-
-	#card {
-		height: 60vw;
-		width: 60vw;
-	}
-
-	
-	.button-container {
-		width: 100% !important;
-		height: 40% !important;
-		left: 0;
-	}
-
-	.button-container p {
-		font-size: 1rem !important;
-	}
-
-	.button-container .skill-container p {
-		font-size: 1rem !important;
-		font-size: .5rem !important;
-	}
-
-
-	.button-container button {
-		width: 70%;
-		/* border-top-right-radius: 50px; */
-	}
-
-
-	.button-container a {
-		font-size: 1rem;
-	}
-
-	.title-field {
-		top: 35vh !important;
-		font-size: 2rem;
-		width: 25%;
-	}
-
-	footer {
-		font-size: 0.7rem;
-	}
-
-	.flying-projectile {
-		top: 70vw !important;
-		left: 35vw;
-	}
-
-	.flying-projectile-leftup {
-		transform: translate(-30vw, -50vw) rotate(-5deg) !important;
-	}
-
-	.flying-projectile-rightup {
-		transform: translate(30vw, -50vw) rotate(5deg) !important;
-	}
-
-	.flying-projectile-leftdown {
-		transform: translate(-27vw, -15vw) rotate(-20deg) !important;
-	}
-
-	.flying-projectile-rightdown {
-		transform: translate(27vw, -15vw) rotate(10deg) !important;
-	}
-}
 
 [data-theme="dark"] {
 	--primary: #1e88e5 !important;
@@ -495,21 +327,252 @@ html[dir="rtl"] {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	transition: 3s;
+	/* transition: 3s; */
 }
 
 .flying-projectile-leftup {
-	transform: translate(-27vw, -10vw) rotate(-10deg);
+	transform: translate(-27vw, -15vh) rotate(-10deg);
 }
 
 .flying-projectile-rightup {
-	transform: translate(20vw, -10vw) rotate(10deg);
+	transform: translate(20vw, -15vh) rotate(10deg);
 }
 
 .flying-projectile-leftdown {
-	transform: translate(-27vw, 10vw) rotate(-30deg);
+	transform: translate(-27vw, 15vh) rotate(-30deg);
 }
 
 .flying-projectile-rightdown {
-	transform: translate(20vw, 15vw) rotate(-10deg);
+	transform: translate(25vw, 20vh) rotate(-10deg);
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+	* {
+		user-select: none !important;
+	}
+
+	.flying-button {
+		height: 10vw;
+		width: 10vw;
+		font-size: 4vw;
+	}
+
+	#card {
+		height: 90vw;
+		width: 90vw;
+	}
+
+	.button-container {
+		width: 100% !important;
+		height: 40% !important;
+		left: 0;
+	}
+
+	.button-container p {
+		font-size: 1rem !important;
+	}
+
+	.button-container .skill-container p {
+		font-size: 1rem !important;
+		font-size: .5rem !important;
+	}
+
+
+	.button-container a {
+		width: 70%;
+		/* border-top-right-radius: 50px; */
+	}
+
+	.button-container a {
+		font-size: 1rem;
+	}
+
+	.title-field {
+		font-size: 1rem;
+		font-weight: normal;
+		width: 10%;
+		top: 5px;
+	}
+
+	.left-text-field {
+		left: 2px;
+	}
+
+	footer {
+		font-size: 0.5rem;
+	}
+
+
+	.flying-projectile {
+		top: 70vw !important;
+		left: 35vw;
+	}
+
+	.flying-projectile-leftup {
+		transform: translate(-10vw, -20vh) rotate(-5deg) !important;
+	}
+
+	.flying-projectile-rightup {
+		transform: translate(10vw, -20vh) rotate(5deg) !important;
+	}
+
+	.flying-projectile-leftdown {
+		transform: translate(-27vw, -18vh) rotate(-20deg) !important;
+	}
+
+	.flying-projectile-rightdown {
+		transform: translate(27vw, -18vh) rotate(10deg) !important;
+	}
+
+	.social-btn {
+		cursor: pointer;
+		height: 50px !important;
+		width: 50px !important;
+		font-family: "Titillium Web", sans-serif;
+		color: #333;
+		border-radius: 10px;
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+		background: white;
+		margin: 5px;
+		transition: 1s;
+		padding: 5px;
+	}
+
+	.social-btn:hover {
+		width: 250px !important;
+		border-radius: 5px;
+	}
+
+
+	#github svg {
+		scale: 1 !important;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1400px) {
+	* {
+		user-select: none !important;
+	}
+
+	#card {
+		height: 60vw;
+		width: 60vw;
+	}
+
+	.card-title {
+		font-family: 1rem !important;
+	}
+
+	.button-container {
+		width: 100% !important;
+		height: 40% !important;
+		left: 0;
+	}
+
+	.button-container p {
+		font-size: 1rem !important;
+	}
+
+	.button-container .skill-container p {
+		font-size: 1rem !important;
+		font-size: .5rem !important;
+	}
+
+
+	.button-container a {
+		width: 70%;
+		/* border-top-right-radius: 50px; */
+	}
+
+	.button-container a {
+		font-size: 1rem;
+	}
+
+	.title-field {
+		top: 35vh !important;
+		font-size: 2rem;
+		width: 25%;
+	}
+
+	footer {
+		font-size: 0.7rem;
+	}
+
+	.flying-projectile {
+		top: 70vw !important;
+		left: 35vw;
+	}
+
+	.flying-projectile-leftup {
+		transform: translate(-30vw, -50vw) rotate(-5deg) !important;
+	}
+
+	.flying-projectile-rightup {
+		transform: translate(30vw, -50vw) rotate(5deg) !important;
+	}
+
+	.flying-projectile-leftdown {
+		transform: translate(-27vw, -15vw) rotate(-20deg) !important;
+	}
+
+	.flying-projectile-rightdown {
+		transform: translate(27vw, -15vw) rotate(10deg) !important;
+	}
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 2200px) {
+
+
+	.card-title {
+		font-family: 1rem !important;
+	}
+
+	.button-container {
+		width: 100% !important;
+		height: 40% !important;
+		left: 0;
+	}
+
+	.button-container p {
+		font-size: 1rem !important;
+	}
+
+	.button-container .skill-container p {
+		font-size: 1rem !important;
+		font-size: .5rem !important;
+	}
+
+
+	.button-container a {
+		width: 70%;
+		/* border-top-right-radius: 50px; */
+	}
+
+	.button-container a {
+		font-size: 1rem;
+	}
+
+	.flying-projectile {
+		top: 70vw !important;
+		left: 35vw;
+	}
+
+	.flying-projectile-leftup {
+		transform: translate(-30vw, -50vw) rotate(-5deg) !important;
+	}
+
+	.flying-projectile-rightup {
+		transform: translate(30vw, -50vw) rotate(5deg) !important;
+	}
+
+	.flying-projectile-leftdown {
+		transform: translate(-27vw, -15vw) rotate(-20deg) !important;
+	}
+
+	.flying-projectile-rightdown {
+		transform: translate(27vw, -15vw) rotate(10deg) !important;
+	}
 }
