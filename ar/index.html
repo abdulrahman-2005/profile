@@ -26,6 +26,10 @@
 </head>
 
 <body>
+    <p id="p1" class="flying-projectile">🦅</p>
+    <p id="p2" class="flying-projectile">💰</p>
+    <p id="p3" class="flying-projectile">🎨</p>
+    <p id="p4" class="flying-projectile">👨‍💻</p>
     <div id="container">
         <div id="card">
             <button class="flying-button mode-flying-button" id="mode-change-button">
@@ -38,9 +42,14 @@
             <img src="../data/images/profile.png" alt="Abu Azmy" id="profile-pic" />
 
             <div class="button-container">
-                <button>
-                    <a href="./p/">اعرف المزيد</a>
-                </button>
+                <p style="font-size: 2rem;">عليكم السلام، انا عبدالرحمن</p>
+                <div class="skill-container">
+                    <p>مصري 🦅</p>
+                    <p>طالب حاسبات 👨‍💻</p>
+                    <p>مصمم مواقع 🎨</p>
+                    <p>على ابوورك 💰</p>
+                </div>
+                <a href="./p/" role="button">اعرف المزيد</a>
             </div>
         </div>
     </div>
@@ -358,6 +367,26 @@
             جميع الحقوق محفوظة &copy; عبدالرحمن عزمي 2024
         </footer>
     </div>
+    <script>
+        const projectile1 = document.getElementById("p1");
+        const projectile2 = document.getElementById("p2");
+        const projectile3 = document.getElementById("p3");
+        const projectile4 = document.getElementById("p4");
+
+
+        setTimeout(() => {
+            projectile1.classList.add("flying-projectile-leftdown");
+        }, 300);
+        setTimeout(() => {
+            projectile2.classList.add("flying-projectile-rightdown");
+        }, 1600);
+        setTimeout(() => {
+            projectile3.classList.add("flying-projectile-leftup");
+        }, 2200);
+        setTimeout(() => {
+            projectile4.classList.add("flying-projectile-rightup");
+        }, 2800);
+    </script>
     <script src="../js/page_init.js"></script>
     <script src="../js/index.js"></script>
 </body>

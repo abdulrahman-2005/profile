@@ -27,6 +27,10 @@
 </head>
 
 <body>
+	<p id="p1" class="flying-projectile">🦅</p>
+	<p id="p2" class="flying-projectile">💰</p>
+	<p id="p3" class="flying-projectile">🎨</p>
+	<p id="p4" class="flying-projectile">👨‍💻</p>
 	<div id="container">
 		<div id="card">
 			<button class="flying-button mode-flying-button" id="mode-change-button">
@@ -37,9 +41,11 @@
 			</button>
 			<img src="../data/images/profile.png" alt="Abu Azmy" id="profile-pic" />
 			<div class="button-container">
-				<button>
-					<a href="./p/">Learn More</a>
-				</button>
+				<p style="font-size: 2rem;">Hi, My name is Abdo Azmy </p>
+				<div class="skill-container">
+						<p>Egyptian 🦅</p><p>CS Student 👨‍💻</p> <p>WebDesigner 🎨</p> <p>On Upwork 💰</p>
+				</div>
+					<a href="./p/"  role="button">Learn More</a>
 			</div>
 		</div>
 	</div>
@@ -81,6 +87,26 @@
 			Copyright reserved &copy; Abdulrahman Azmy 2024
 		</footer>
 	</div>
+	<script>
+		const projectile1 = document.getElementById("p1");
+		const projectile2 = document.getElementById("p2");
+		const projectile3 = document.getElementById("p3");
+		const projectile4 = document.getElementById("p4");
+
+		
+		setTimeout(() => {
+			projectile1.classList.add("flying-projectile-leftdown");
+		}, 300);
+		setTimeout(() => {
+			projectile2.classList.add("flying-projectile-rightdown");
+		}, 1600);
+		setTimeout(() => {
+			projectile3.classList.add("flying-projectile-leftup");
+		}, 2200);
+		setTimeout(() => {
+			projectile4.classList.add("flying-projectile-rightup");
+		}, 2800);
+	</script>
 	<script src="../js/page_init.js"></script>
 	<script src="../js/index.js"></script>
 </body>

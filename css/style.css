@@ -50,8 +50,9 @@ body {
 	width: 50vw;
 	border-radius: 100%;
 	position: relative;
-	border: 10px solid white;
-	background-color: #fff;
+	border: 10px solid var(--primary-focus);
+	background-color: var(--primary-focus);
+	z-index: 50;
 }
 
 #card .profile-image {
@@ -62,36 +63,86 @@ body {
 
 
 .button-container {
-	width: 100%;
-	height: 20%;
+	width: 50%;
+	height: 22%;
 	position: absolute;
+	background-color: var(--primary-inverse);
+	border-radius: 30px;
 	top: 80%;
-	left: 0;
+	left: 25%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
-	padding: 10px;
+	flex-direction: column;
+	gap: 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.button-container button {
+.button-container a {
+	border-radius: 40px;
+	border-radius: 50px;
+	width: 80%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 !important;
+	transition: 0.4s;
+	color: var(--primary-inverse);
+	background-color: var(--primary-focus);
 	border: none;
 	outline: none;
-	border-radius: 40px;
-	box-shadow: 5px 5px 0 1px black;
-	transition: 0.4s;
-	border-radius: 50px;
-	width: 50%;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	/* border-top-right-radius: 50px; */
 }
 
-.button-container button:hover {
+.button-container p {
+	font-size: 1.1rem;
+	font-weight: bold;
+	font-family: "Titillium Web", sans-serif;
+	color: var(--primary-focus);
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	margin: 0 !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.button-container .skill-container {
+	height: 40%;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: repeat(2, 50%);
+	gap: 5px;
+	padding: 10px;
+
+}
+
+.button-container .skill-container p {
+	height: 100%;
+	width: 100%;
+	background-color: var(--primary-focus);
+	color: var(--primary-inverse);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	font-size: 1.3rem;
+}
+
+
+.button-container a:hover {
 	transform: translate(5px, 5px);
 	box-shadow: none;
 }
 
-.button-container button:focus {
+.button-container a:focus {
 	border: none;
 	outline: none;
 	box-shadow: none;
@@ -123,7 +174,7 @@ button a {
 	padding: 5px;
 	border-radius: 100%;
 	transition: 0.4s;
-	border: .5vw solid white;
+	border: .5vw solid var(--primary-focus);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -162,9 +213,29 @@ button a {
 		width: 90vw;
 	}
 
+	.button-container {
+		width: 100%;
+		height: 40%;
+		left: 0;
+	}
+
+	.button-container p {
+		font-size: 1rem !important;
+	}
+
+	.button-container .skill-container p {
+		font-size: 1rem !important;
+		font-size: .5rem !important;
+	}
+
+
 	.button-container button {
 		width: 70%;
 		/* border-top-right-radius: 50px; */
+	}
+
+	.button-container a {
+		font-size: 1rem;
 	}
 
 	.title-field {
@@ -181,6 +252,28 @@ button a {
 	footer {
 		font-size: 0.5rem;
 	}
+
+
+	.flying-projectile {
+		top: 70vw !important;
+		left: 35vw;
+	}
+
+	.flying-projectile-leftup {
+		transform: translate(-10vw, -20vw) rotate(-5deg) !important;
+	}
+
+	.flying-projectile-rightup {
+		transform: translate(10vw, -20vw) rotate(5deg) !important;
+	}
+
+	.flying-projectile-leftdown {
+		transform: translate(-27vw, -15vw) rotate(-20deg) !important;
+	}
+
+	.flying-projectile-rightdown {
+		transform: translate(27vw, -15vw) rotate(10deg) !important;
+	}
 }
 
 @media only screen and (min-width: 555px) and (max-width: 800px) {
@@ -189,13 +282,34 @@ button a {
 	}
 
 	#card {
-		height: 90vw;
-		width: 90vw;
+		height: 60vw;
+		width: 60vw;
 	}
+
+	.button-container {
+		width: 100%;
+		height: 40%;
+		left: 0;
+	}
+
+	.button-container p {
+		font-size: 1rem !important;
+	}
+
+	.button-container .skill-container p {
+		font-size: 1rem !important;
+		font-size: .5rem !important;
+	}
+
 
 	.button-container button {
 		width: 70%;
 		/* border-top-right-radius: 50px; */
+	}
+
+
+	.button-container a {
+		font-size: 1rem;
 	}
 
 	.title-field {
@@ -206,6 +320,27 @@ button a {
 
 	footer {
 		font-size: 0.7rem;
+	}
+
+	.flying-projectile {
+		top: 70vw !important;
+		left: 35vw;
+	}
+
+	.flying-projectile-leftup {
+		transform: translate(-10vw, -20vw) rotate(-5deg) !important;
+	}
+
+	.flying-projectile-rightup {
+		transform: translate(10vw, -20vw) rotate(5deg) !important;
+	}
+
+	.flying-projectile-leftdown {
+		transform: translate(-27vw, -15vw) rotate(-20deg) !important;
+	}
+
+	.flying-projectile-rightdown {
+		transform: translate(27vw, -15vw) rotate(10deg) !important;
 	}
 }
 
@@ -240,7 +375,7 @@ button a {
 .social-links {
 	height: 20%;
 	width: 70%;
-	background-color: var(--primary);
+	background-color: var(--primary-focus);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -249,8 +384,8 @@ button a {
 
 .social-btn {
 	cursor: pointer;
-	height: 50px;
-	width: 50px;
+	height: 150px;
+	width: 150px;
 	font-family: "Titillium Web", sans-serif;
 	color: #333;
 	border-radius: 10px;
@@ -270,7 +405,7 @@ button a {
 }
 
 .social-btn:hover {
-	width: 150px;
+	width: 250px;
 	border-radius: 5px;
 }
 
@@ -289,6 +424,10 @@ button a {
 
 #github {
 	fill: #333;
+}
+
+#github svg {
+	scale: 4.5;
 }
 
 footer {
@@ -313,4 +452,37 @@ html[dir="rtl"] {
 	.left-text-field {
 		left: 5px;
 	}
+}
+
+
+.flying-projectile {
+	position: absolute;
+	top: 10vw;
+	left: 35vw;
+	z-index: 20;
+	height: 30vw;
+	width: 30vw;
+	font-size: 25vw;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: 3s;
+}
+
+.flying-projectile-leftup {
+	transform: translate(-27vw, -10vw) rotate(-10deg);
+}
+
+.flying-projectile-rightup {
+	transform: translate(20vw, -10vw) rotate(10deg);
+}
+
+.flying-projectile-leftdown {
+	transform: translate(-27vw, 10vw) rotate(-30deg);
+}
+
+.flying-projectile-rightdown {
+	transform: translate(20vw, 15vw) rotate(-10deg);
 }
