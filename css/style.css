@@ -262,19 +262,19 @@ button a {
 	}
 
 	.flying-projectile-leftup {
-		transform: translate(-10vw, -30vw) rotate(-5deg) !important;
+		transform: translate(-10vw, -40vw) rotate(-5deg) !important;
 	}
 
 	.flying-projectile-rightup {
-		transform: translate(10vw, -30vw) rotate(5deg) !important;
+		transform: translate(10vw, -40vw) rotate(5deg) !important;
 	}
 
 	.flying-projectile-leftdown {
-		transform: translate(-27vw, -25vw) rotate(-20deg) !important;
+		transform: translate(-27vw, -35vw) rotate(-20deg) !important;
 	}
 
 	.flying-projectile-rightdown {
-		transform: translate(27vw, -25vw) rotate(10deg) !important;
+		transform: translate(27vw, -35vw) rotate(10deg) !important;
 	}
 
 	.social-btn {
