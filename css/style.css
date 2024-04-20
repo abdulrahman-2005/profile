@@ -497,9 +497,27 @@ html[dir="rtl"] {
 		width: 25%;
 	}
 
+
+	.social-btn {
+		height: 70px !important;
+		width: 70px !important;
+	}
+
+	.social-btn:hover {
+		width: 150px !important;
+		border-radius: 5px;
+	}
+
+
+	#github svg {
+		scale: 2 !important;
+	}
+
 	footer {
 		font-size: 0.7rem;
 	}
+
+
 
 	.flying-projectile {
 		top: 70vw !important;
