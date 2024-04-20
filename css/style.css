@@ -46,19 +46,23 @@ body {
 }
 
 #card {
-	height: 90%;
-	width: 35%;
-	border-radius: 150px 50px 150px 50px;
-	max-width: 100%;
-	max-height: 100%;
+	height: 50vw;
+	width: 50vw;
+	border-radius: 100%;
 	position: relative;
-	background-image: url(../data/images/profile.png);
-	background-repeat: no-repeat;
-	background-size: cover;
+	border: 10px solid white;
+	background-color: #fff;
 }
 
+#card .profile-image {
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+}
+
+
 .button-container {
-	width: 70%;
+	width: 100%;
 	height: 20%;
 	position: absolute;
 	top: 80%;
@@ -77,6 +81,8 @@ body {
 	box-shadow: 5px 5px 0 1px black;
 	transition: 0.4s;
 	border-radius: 50px;
+	width: 50%;
+	font-size: 2rem;
 	/* border-top-right-radius: 50px; */
 }
 
@@ -110,14 +116,18 @@ button a {
 }
 
 .flying-button {
-	height: 50px;
-	width: 50px;
+	height: 5vw;
+	width: 5vw;
 	font-size: 25px;
 	position: absolute;
 	padding: 5px;
 	border-radius: 100%;
-	box-shadow: 5px 5px 0 1px black;
 	transition: 0.4s;
+	border: .5vw solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2vw;
 }
 
 .flying-button:hover {
@@ -126,13 +136,13 @@ button a {
 }
 
 .mode-flying-button {
-	top: 25px;
-	right: 85px;
+	top: 1vw;
+	right: 10vw;
 }
 
 .lang-flying-button {
-	top: 25px;
-	right: 25px;
+	top: 10vw;
+	right: 1vw;
 	font-family: monospace !important;
 }
 
@@ -141,8 +151,20 @@ button a {
 		user-select: none !important;
 	}
 
+	.flying-button {
+		height: 10vw;
+		width: 10vw;
+		font-size: 4vw;
+	}
+
 	#card {
-		width: 80%;
+		height: 90vw;
+		width: 90vw;
+	}
+
+	.button-container button {
+		width: 70%;
+		/* border-top-right-radius: 50px; */
 	}
 
 	.title-field {
@@ -167,7 +189,13 @@ button a {
 	}
 
 	#card {
-		width: 60%;
+		height: 90vw;
+		width: 90vw;
+	}
+
+	.button-container button {
+		width: 70%;
+		/* border-top-right-radius: 50px; */
 	}
 
 	.title-field {
