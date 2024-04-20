@@ -327,7 +327,7 @@ html[dir="rtl"] {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	/* transition: 3s; */
+	transition: 3s;
 }
 
 .flying-projectile-leftup {
