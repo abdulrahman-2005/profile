@@ -40,13 +40,19 @@ function randomBGImage() {
 	return `bg${randomNumber}.svg`;
 }
 
+function randomMainBGImage() {
+	let bgs = ["bg1.svg", "bg6.svg"]
+	let randomNumber = Math.floor(Math.random() * (bgs.length - 1));
+	return bgs[randomNumber];
+}
+
 function changeBG() {
 	container.style[
 		"background-image"
-	] = `url(../data/images/bgs/${randomBGImage()})`;
+	] = `url(../data/images/bgs/${randomMainBGImage()})`;
 	extraSpace.style[
 		"background-image"
-	] = `url(../data/images/bgs/${randomBGImage()})`;
+	] = `url(../data/images/bgs/${randomMainBGImage()})`;
 }
 
 changeBG();
