@@ -314,40 +314,6 @@ html[dir="rtl"] {
 }
 
 
-.flying-projectile {
-	position: absolute;
-	top: 10vw;
-	left: 35vw;
-	z-index: 20;
-	height: 30vw;
-	width: 30vw;
-	font-size: 25vw;
-	background-color: transparent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	transition: 3s;
-}
-
-.flying-projectile-leftup {
-	transform: translate(-27vw, -15vh) rotate(-10deg);
-}
-
-.flying-projectile-rightup {
-	transform: translate(20vw, -15vh) rotate(10deg);
-}
-
-.flying-projectile-leftdown {
-	transform: translate(-27vw, 15vh) rotate(-30deg);
-}
-
-.flying-projectile-rightdown {
-	transform: translate(25vw, 20vh) rotate(-10deg);
-}
-
-
-
 
 @media only screen and (max-width: 600px) {
 	* {
@@ -403,28 +369,6 @@ html[dir="rtl"] {
 
 	footer {
 		font-size: 0.5rem;
-	}
-
-
-	.flying-projectile {
-		top: 70vw !important;
-		left: 35vw;
-	}
-
-	.flying-projectile-leftup {
-		transform: translate(-10vw, -20vh) rotate(-5deg) !important;
-	}
-
-	.flying-projectile-rightup {
-		transform: translate(10vw, -20vh) rotate(5deg) !important;
-	}
-
-	.flying-projectile-leftdown {
-		transform: translate(-27vw, -18vh) rotate(-20deg) !important;
-	}
-
-	.flying-projectile-rightdown {
-		transform: translate(27vw, -18vh) rotate(10deg) !important;
 	}
 
 	.social-btn {
@@ -516,29 +460,6 @@ html[dir="rtl"] {
 	footer {
 		font-size: 0.7rem;
 	}
-
-
-
-	.flying-projectile {
-		top: 70vw !important;
-		left: 35vw;
-	}
-
-	.flying-projectile-leftup {
-		transform: translate(-30vw, -50vw) rotate(-5deg) !important;
-	}
-
-	.flying-projectile-rightup {
-		transform: translate(30vw, -50vw) rotate(5deg) !important;
-	}
-
-	.flying-projectile-leftdown {
-		transform: translate(-27vw, -15vw) rotate(-20deg) !important;
-	}
-
-	.flying-projectile-rightdown {
-		transform: translate(27vw, -15vw) rotate(10deg) !important;
-	}
 }
 
 @media only screen and (min-width: 1401px) and (max-width: 2200px) {
@@ -571,26 +492,5 @@ html[dir="rtl"] {
 
 	.button-container a {
 		font-size: 1rem;
-	}
-
-	.flying-projectile {
-		top: 70vw !important;
-		left: 35vw;
-	}
-
-	.flying-projectile-leftup {
-		transform: translate(-30vw, -50vw) rotate(-5deg) !important;
-	}
-
-	.flying-projectile-rightup {
-		transform: translate(30vw, -50vw) rotate(5deg) !important;
-	}
-
-	.flying-projectile-leftdown {
-		transform: translate(-27vw, -15vw) rotate(-20deg) !important;
-	}
-
-	.flying-projectile-rightdown {
-		transform: translate(27vw, -15vw) rotate(10deg) !important;
 	}
 }
