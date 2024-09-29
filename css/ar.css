@@ -17,3 +17,9 @@ kbd {
 	font-style: normal;
 	font-variation-settings: "slnt" 0;
 }
+
+.experience-item p {
+	margin-bottom: 0.5em;
+	padding-right: 3em;
+	color: white;
+}
