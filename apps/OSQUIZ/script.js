@@ -19,7 +19,7 @@ class Quiz {
         this.nextBtn = document.getElementById('next-btn');
         this.progressBar = document.getElementById('progress-bar');
 
-        this.loadState();
+        this.resetAndRestart()
         this.initEventListeners();
         this.loadQuestion();
 
@@ -74,6 +74,17 @@ class Quiz {
         const currentQuestion = this.questions[this.currentQuestionIndex];
         this.questionText.textContent = currentQuestion.question;
         this.optionsContainer.innerHTML = '';
+        
+        // randomize options
+        let currentCorrectAnswer = currentQuestion.answer; //index of correct answer in options
+        let currentOptions = currentQuestion.options;
+        let newRandomCorrectAnswer = Math.floor(Math.random() * currentOptions.length);
+        let temp = currentOptions[currentCorrectAnswer];
+        currentOptions[currentCorrectAnswer] = currentOptions[newRandomCorrectAnswer];
+        currentOptions[newRandomCorrectAnswer] = temp;
+        currentQuestion.answer = newRandomCorrectAnswer;
+
+
 
         currentQuestion.options.forEach((option, index) => {
             const optionButton = document.createElement('button');

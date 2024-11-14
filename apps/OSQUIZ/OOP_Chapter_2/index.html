@@ -56,293 +56,282 @@
         </div>
     </div>
     <script>const questions = [
-
-            {
-                question: "What is the primary purpose of system calls?",
-                options: [
-                    "Provide a programming interface to OS services",
-                    "Manage hardware resources",
-                    "Create user interfaces",
-                    "Execute application programs"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "Which of the following is NOT a typical user goal for an operating system?",
-                options: [
-                    "Easy to use",
-                    "Reliable",
-                    "Complex to understand",
-                    "Fast"
-                ],
-                answer: 2,
-                chapter: 2
-            },
-            {
-                question: "What is the key principle of separating policy from mechanism in OS design?",
-                options: [
-                    "Allows maximum flexibility for changing decisions later",
-                    "Reduces system performance",
-                    "Increases complexity",
-                    "Limits user interactions"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is a microkernel system structure primarily aimed at?",
-                options: [
-                    "Moving more functionality into user space",
-                    "Increasing kernel complexity",
-                    "Reducing system modularity",
-                    "Limiting system extensibility"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the main advantage of a layered approach in OS design?",
-                options: [
-                    "Each layer uses only lower-level layer functions",
-                    "Increases system complexity",
-                    "Reduces system modularity",
-                    "Limits system flexibility"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "Which programming language is most commonly used for modern OS implementation?",
-                options: [
-                    "C",
-                    "Assembly",
-                    "Java",
-                    "Python"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the primary purpose of system programs?",
-                options: [
-                    "Provide a convenient environment for program development",
-                    "Manage hardware resources",
-                    "Execute kernel operations",
-                    "Create user interfaces"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is a loadable kernel module?",
-                options: [
-                    "A software component that can be added to the kernel dynamically",
-                    "A permanent part of the kernel",
-                    "A user-level application",
-                    "A hardware driver"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the main benefit of a modular approach in OS design?",
-                options: [
-                    "Allows each component to be developed separately",
-                    "Increases system complexity",
-                    "Reduces system flexibility",
-                    "Limits extensibility"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What does DTrace primarily help with?",
-                options: [
-                    "Performance analysis and debugging",
-                    "Hardware resource management",
-                    "User interface design",
-                    "Kernel module development"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the purpose of a bootstrap loader?",
-                options: [
-                    "Locate and load the kernel into memory",
-                    "Manage user applications",
-                    "Create system interfaces",
-                    "Handle interrupt processing"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is a system call interface responsible for?",
-                options: [
-                    "Invoking system calls in the OS kernel",
-                    "Managing hardware resources",
-                    "Creating user interfaces",
-                    "Executing application programs"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the main characteristic of a hybrid operating system?",
-                options: [
-                    "Combines multiple approaches to address different needs",
-                    "Uses a single pure design model",
-                    "Limits system flexibility",
-                    "Reduces system performance"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What are the typical goals of system debugging?",
-                options: [
-                    "Finding and fixing errors, and performance tuning",
-                    "Creating new system features",
-                    "Managing hardware resources",
-                    "Developing user interfaces"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the primary purpose of a SYSGEN program?",
-                options: [
-                    "Obtain information about specific hardware configuration",
-                    "Manage system resources",
-                    "Create user interfaces",
-                    "Execute application programs"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is an API (Application Programming Interface)?",
-                options: [
-                    "A set of routines for accessing OS services",
-                    "A hardware management tool",
-                    "A user interface design",
-                    "A kernel module"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the main disadvantage of a microkernel system structure?",
-                options: [
-                    "Performance overhead of communication between user space and kernel space",
-                    "Reduced system flexibility",
-                    "Limited extensibility",
-                    "Increased system complexity"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What types of system calls exist?",
-                options: [
-                    "Process control, file management, device management, communication",
-                    "Hardware management only",
-                    "User interface creation",
-                    "Application execution"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the primary function of system programs related to communications?",
-                options: [
-                    "Create virtual connections between processes and users",
-                    "Manage hardware resources",
-                    "Execute application programs",
-                    "Design user interfaces"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is a core characteristic of the Android operating system?",
-                options: [
-                    "Based on a modified Linux kernel",
-                    "Completely closed source",
-                    "Uses only Java for development",
-                    "Lacks a runtime environment"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the main purpose of profiling in OS debugging?",
-                options: [
-                    "Periodic sampling of instruction pointer to identify statistical trends",
-                    "Managing hardware resources",
-                    "Creating user interfaces",
-                    "Executing application programs"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is a key characteristic of the UNIX system structure?",
-                options: [
-                    "Consists of the kernel and system programs",
-                    "Completely modular design",
-                    "Lacks any structural organization",
-                    "Exclusively uses microkernel architecture"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the primary goal of separating user goals from system goals in OS design?",
-                options: [
-                    "Balance user convenience with system efficiency",
-                    "Increase system complexity",
-                    "Limit system flexibility",
-                    "Reduce performance"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the main purpose of background services in an operating system?",
-                options: [
-                    "Provide facilities like disk checking and process scheduling",
-                    "Create user interfaces",
-                    "Execute application programs",
-                    "Manage hardware resources"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What characterizes the implementation of early operating systems?",
-                options: [
-                    "Written in assembly language",
-                    "Developed in high-level languages",
-                    "Used only compiled languages",
-                    "Exclusively used interpreted languages"
-                ],
-                answer: 0,
-                chapter: 2
-            },
-            {
-                question: "What is the primary advantage of using C for OS implementation?",
-                options: [
-                    "Easier to port to different hardware",
-                    "Provides the fastest performance", "Requires less memory",
-                    "Simplifies debugging"
-                ],
-                answer: 0,
-                chapter: 2
-            }
-        ]
+        {
+            question: "What is one of the primary functions of an operating system?",
+            options: [
+                "To provide an environment for program execution",
+                "To manage hardware components",
+                "To create applications",
+                "To handle network communications"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What type of user interface allows direct command entry?",
+            options: [
+                "Command-Line Interface (CLI)",
+                "Graphical User Interface (GUI)",
+                "Touchscreen Interface",
+                "Voice Command Interface"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "Which of the following is a service that operating systems provide to users?",
+            options: [
+                "File-system manipulation",
+                "Hardware management",
+                "Network security",
+                "Application development"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the primary purpose of I/O operations in an operating system?",
+            options: [
+                "To manage input and output devices",
+                "To execute user programs",
+                "To allocate memory",
+                "To handle system calls"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "How do processes exchange information in an operating system?",
+            options: [
+                "Through shared memory or message passing",
+                "By direct file access",
+                "Via user input",
+                "Through graphical interfaces"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the role of error detection in an operating system?",
+            options: [
+                "To identify and respond to possible errors",
+                "To optimize memory usage",
+                "To manage user inputs",
+                "To execute application programs"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What does resource allocation in an operating system involve?",
+            options: [
+                "Distributing CPU cycles, memory, and I/O devices to processes",
+                "Managing user permissions",
+                "Executing system calls",
+                "Creating user interfaces"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the purpose of accounting in an operating system?",
+            options: [
+                "To track resource usage by users",
+                "To manage memory allocation",
+                "To handle file permissions",
+                "To optimize system performance"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the main function of a user interface (UI) in an operating system?",
+            options: [
+                "To allow users to interact with the system",
+                "To manage hardware resources",
+                "To execute system calls",
+                "To perform error detection"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "Which of the following is a characteristic of a Command-Line Interface (CLI)?",
+            options: [
+                "Requires text commands from the user",
+                "Utilizes graphical icons",
+                "Is more user-friendly than GUIs",
+                "Does not require user input"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is a key feature of a Graphical User Interface (GUI)?",
+            options: [
+                "Uses icons and visual indicators for interaction",
+                "Requires text-based commands",
+                "Is only available in UNIX systems",
+                "Does not allow user customization"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the purpose of system calls in an operating system?",
+            options: [
+                "To provide a programming interface to OS services",
+                "To manage hardware resources",
+                "To create user applications",
+                "To execute user commands"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "Which programming languages are typically used for writing system calls?",
+            options: [
+                "C or C++",
+                "Java or Python",
+                "Assembly only",
+                "HTML or CSS"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the role of an API (Application Programming Interface) in relation to system calls?",
+            options: [
+                "It serves as a high-level interface for making system calls",
+                "It replaces system calls entirely",
+                "It is used to manage hardware resources",
+                "It is only for user interface design"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the primary function of file management in an operating system?",
+            options: [
+     "To create, delete, and manipulate files and directories",
+                "To manage hardware resources",
+                "To execute user applications",
+                "To handle network communications"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What type of system call is used to create a new process?",
+            options: [
+                "Process control",
+                "File management",
+                "Device management",
+                "Information maintenance"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "Which of the following is a method for passing parameters to the OS?",
+            options: [
+                "Using registers, memory blocks, or stack",
+                "Only through registers",
+                "Only through memory blocks",
+                "Only through the stack"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the purpose of debugging facilities in an operating system?",
+            options: [
+                "To enhance user and programmer efficiency",
+                "To manage hardware resources",
+                "To execute application programs",
+                "To create user interfaces"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the main advantage of using a Command-Line Interface (CLI)?",
+            options: [
+                "Allows for quick and efficient command execution",
+                "Is more visually appealing than GUIs",
+                "Requires less memory than GUIs",
+                "Is easier for beginners to use"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is a common feature of touchscreen interfaces?",
+            options: [
+                "Uses gestures for actions and selections",
+                "Requires a mouse and keyboard",
+                "Is only available on mobile devices",
+                "Does not support voice commands"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the role of communications in an operating system?",
+            options: [
+                "To allow processes to exchange information",
+                "To manage hardware resources",
+                "To execute user applications",
+                "To create user interfaces"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the primary function of error detection in an operating system?",
+            options: [
+                "To ensure correct and consistent computing",
+                "To manage user permissions",
+                "To execute application programs",
+                "To allocate memory"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the purpose of protection and security in an operating system?",
+            options: [
+                "To control access to resources and ensure user authentication",
+                "To manage hardware resources",
+                "To execute user applications",
+                "To create user interfaces"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the main goal of resource allocation in an operating system?",
+            options: [
+                "To distribute resources among multiple users or jobs",
+                "To manage user permissions",
+                "To execute system calls",
+                "To create user interfaces"
+            ],
+            answer: 0,
+            chapter: 2
+        },
+        {
+            question: "What is the primary function of background services in an operating system?",
+            options: [
+                "To provide essential system functions like disk checking and error logging",
+                "To create user interfaces",
+                "To execute application programs",
+                "To manage hardware resources"
+            ],
+            answer: 0,
+            chapter: 2
+        }
+    ];
     </script>
     <script src="../script.js"></script>
 </body>
