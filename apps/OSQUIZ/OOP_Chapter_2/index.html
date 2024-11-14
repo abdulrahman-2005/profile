@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Concepts Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <header>
+                <h1>Operating Systems Quiz</h1>
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </header>
+
+            <div id="quiz-section">
+                <div class="chapter-info" id="chapter-info">
+                    Chapter: 1
+                </div>
+
+                <div class="question-container">
+                    <h2 id="question-text"></h2>
+                    <div class="options-grid" id="options-container"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="submit-btn" class="btn-submit">Submit Answer</button>
+                    <button id="next-btn" class="btn-next" style="display:none;">Next Question</button>
+                </div>
+            </div>
+
+            <div id="results-section" class="results-hidden">
+                <div class="results-container">
+                    <h2>Quiz Completed!</h2>
+                    <div class="score-breakdown">
+                        <div class="total-score">
+                            <span id="final-score">0</span>
+                            <p>Total Score</p>
+                        </div>
+                        <div class="score-details" id="score-details">
+                            <p>Correct Answers: <span id="correct-count">0</span></p>
+                            <p>Incorrect Answers: <span id="incorrect-count">0</span>
+                        </div>
+                    </div>
+                    <div class="result-actions">
+                        <button id="restart-btn" class="btn-restart">Restart Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>const questions = [
+
+            {
+                question: "What is the primary purpose of system calls?",
+                options: [
+                    "Provide a programming interface to OS services",
+                    "Manage hardware resources",
+                    "Create user interfaces",
+                    "Execute application programs"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "Which of the following is NOT a typical user goal for an operating system?",
+                options: [
+                    "Easy to use",
+                    "Reliable",
+                    "Complex to understand",
+                    "Fast"
+                ],
+                answer: 2,
+                chapter: 2
+            },
+            {
+                question: "What is the key principle of separating policy from mechanism in OS design?",
+                options: [
+                    "Allows maximum flexibility for changing decisions later",
+                    "Reduces system performance",
+                    "Increases complexity",
+                    "Limits user interactions"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is a microkernel system structure primarily aimed at?",
+                options: [
+                    "Moving more functionality into user space",
+                    "Increasing kernel complexity",
+                    "Reducing system modularity",
+                    "Limiting system extensibility"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the main advantage of a layered approach in OS design?",
+                options: [
+                    "Each layer uses only lower-level layer functions",
+                    "Increases system complexity",
+                    "Reduces system modularity",
+                    "Limits system flexibility"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "Which programming language is most commonly used for modern OS implementation?",
+                options: [
+                    "C",
+                    "Assembly",
+                    "Java",
+                    "Python"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the primary purpose of system programs?",
+                options: [
+                    "Provide a convenient environment for program development",
+                    "Manage hardware resources",
+                    "Execute kernel operations",
+                    "Create user interfaces"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is a loadable kernel module?",
+                options: [
+                    "A software component that can be added to the kernel dynamically",
+                    "A permanent part of the kernel",
+                    "A user-level application",
+                    "A hardware driver"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the main benefit of a modular approach in OS design?",
+                options: [
+                    "Allows each component to be developed separately",
+                    "Increases system complexity",
+                    "Reduces system flexibility",
+                    "Limits extensibility"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What does DTrace primarily help with?",
+                options: [
+                    "Performance analysis and debugging",
+                    "Hardware resource management",
+                    "User interface design",
+                    "Kernel module development"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the purpose of a bootstrap loader?",
+                options: [
+                    "Locate and load the kernel into memory",
+                    "Manage user applications",
+                    "Create system interfaces",
+                    "Handle interrupt processing"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is a system call interface responsible for?",
+                options: [
+                    "Invoking system calls in the OS kernel",
+                    "Managing hardware resources",
+                    "Creating user interfaces",
+                    "Executing application programs"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the main characteristic of a hybrid operating system?",
+                options: [
+                    "Combines multiple approaches to address different needs",
+                    "Uses a single pure design model",
+                    "Limits system flexibility",
+                    "Reduces system performance"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What are the typical goals of system debugging?",
+                options: [
+                    "Finding and fixing errors, and performance tuning",
+                    "Creating new system features",
+                    "Managing hardware resources",
+                    "Developing user interfaces"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the primary purpose of a SYSGEN program?",
+                options: [
+                    "Obtain information about specific hardware configuration",
+                    "Manage system resources",
+                    "Create user interfaces",
+                    "Execute application programs"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is an API (Application Programming Interface)?",
+                options: [
+                    "A set of routines for accessing OS services",
+                    "A hardware management tool",
+                    "A user interface design",
+                    "A kernel module"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the main disadvantage of a microkernel system structure?",
+                options: [
+                    "Performance overhead of communication between user space and kernel space",
+                    "Reduced system flexibility",
+                    "Limited extensibility",
+                    "Increased system complexity"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What types of system calls exist?",
+                options: [
+                    "Process control, file management, device management, communication",
+                    "Hardware management only",
+                    "User interface creation",
+                    "Application execution"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the primary function of system programs related to communications?",
+                options: [
+                    "Create virtual connections between processes and users",
+                    "Manage hardware resources",
+                    "Execute application programs",
+                    "Design user interfaces"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is a core characteristic of the Android operating system?",
+                options: [
+                    "Based on a modified Linux kernel",
+                    "Completely closed source",
+                    "Uses only Java for development",
+                    "Lacks a runtime environment"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the main purpose of profiling in OS debugging?",
+                options: [
+                    "Periodic sampling of instruction pointer to identify statistical trends",
+                    "Managing hardware resources",
+                    "Creating user interfaces",
+                    "Executing application programs"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is a key characteristic of the UNIX system structure?",
+                options: [
+                    "Consists of the kernel and system programs",
+                    "Completely modular design",
+                    "Lacks any structural organization",
+                    "Exclusively uses microkernel architecture"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the primary goal of separating user goals from system goals in OS design?",
+                options: [
+                    "Balance user convenience with system efficiency",
+                    "Increase system complexity",
+                    "Limit system flexibility",
+                    "Reduce performance"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the main purpose of background services in an operating system?",
+                options: [
+                    "Provide facilities like disk checking and process scheduling",
+                    "Create user interfaces",
+                    "Execute application programs",
+                    "Manage hardware resources"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What characterizes the implementation of early operating systems?",
+                options: [
+                    "Written in assembly language",
+                    "Developed in high-level languages",
+                    "Used only compiled languages",
+                    "Exclusively used interpreted languages"
+                ],
+                answer: 0,
+                chapter: 2
+            },
+            {
+                question: "What is the primary advantage of using C for OS implementation?",
+                options: [
+                    "Easier to port to different hardware",
+                    "Provides the fastest performance", "Requires less memory",
+                    "Simplifies debugging"
+                ],
+                answer: 0,
+                chapter: 2
+            }
+        ]
+    </script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
