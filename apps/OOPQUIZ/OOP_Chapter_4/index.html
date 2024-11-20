@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Concepts Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <header>
+                <h1>Operating Systems Quiz</h1>
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </header>
+
+            <div id="quiz-section">
+                <div class="chapter-info" id="chapter-info">
+                    Chapter: 1
+                </div>
+
+                <div class="question-container">
+                    <h2 id="question-text"></h2>
+                    <div class="options-grid" id="options-container"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="submit-btn" class="btn-submit">Submit Answer</button>
+                    <button id="next-btn" class="btn-next" style="display:none;">Next Question</button>
+                </div>
+            </div>
+
+            <div id="results-section" class="results-hidden">
+                <div class="results-container">
+                    <h2>Quiz Completed!</h2>
+                    <div class="score-breakdown">
+                        <div class="total-score">
+                            <span id="final-score">0</span>
+                            <p>Total Score</p>
+                        </div>
+                        <div class="score-details" id="score-details">
+                            <p>Correct Answers: <span id="correct-count">0</span></p>
+                            <p>Incorrect Answers: <span id="incorrect-count">0</span>
+                        </div>
+                    </div>
+                    <div class="result-actions">
+                        <button id="restart-btn" class="btn-restart">Restart Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>const questions = [
+            {
+                question: "What is object composition in C++?",
+                options: [
+                    "When a class inherits from another class",
+                    "When a class has a member variable that is an instance of another class",
+                    "When two objects are combined using the + operator",
+                    "When an object is created inside a function"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "In the following code structure:\nclass Engine { ... };\nclass Car { private: Engine e; };'\nWhat type of relationship exists between Car and Engine?",
+                options: [
+                    "Car inherits Engine",
+                    "Car has-a Engine",
+                    "Engine is a friend of Car",
+                    "Engine inherits Car"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the primary purpose of object composition?",
+                options: [
+                    "To reduce the size of objects in memory",
+                    "To create complex objects using simpler objects as building blocks",
+                    "To allow objects to inherit behavior from other classes",
+                    "To make all member variables private"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "In a Carpet class that uses a Rectangle object for its dimensions, when is the Rectangle object constructed?",
+                options: [
+                    "After the Carpet object is constructed",
+                    "Before the Carpet object's constructor runs",
+                    "During the Carpet object's constructor initialization list",
+                    "Only when explicitly created by the programmer"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "If class House contains objects of class Room, Window, and Door, this is an example of:",
+                options: [
+                    "Multiple inheritance",
+                    "Multiple composition",
+                    "Object composition",
+                    "Class aggregation"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "When a class contains an object of another class, what happens when the containing object is destroyed?",
+                options: [
+                    "Only the containing object is destroyed",
+                    "The contained object must be manually destroyed",
+                    "The contained object is automatically destroyed",
+                    "A memory leak occurs"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "In object composition, what is the lifetime of the contained object in relation to its container?",
+                options: [
+                    "Independent of the container",
+                    "Same as the container",
+                    "Longer than the container",
+                    "Determined at runtime"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is a potential advantage of using object composition over inheritance?",
+                options: [
+                    "It allows for method overriding",
+                    "It reduces code complexity by keeping objects independent",
+                    "It enables polymorphism",
+                    "It provides access to protected members"
+                ],
+                answer: 1,
+                chapter: 7
+            }
+        ];
+    </script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

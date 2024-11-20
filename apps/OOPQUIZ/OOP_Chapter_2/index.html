@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Concepts Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <header>
+                <h1>Operating Systems Quiz</h1>
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </header>
+
+            <div id="quiz-section">
+                <div class="chapter-info" id="chapter-info">
+                    Chapter: 1
+                </div>
+
+                <div class="question-container">
+                    <h2 id="question-text"></h2>
+                    <div class="options-grid" id="options-container"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="submit-btn" class="btn-submit">Submit Answer</button>
+                    <button id="next-btn" class="btn-next" style="display:none;">Next Question</button>
+                </div>
+            </div>
+
+            <div id="results-section" class="results-hidden">
+                <div class="results-container">
+                    <h2>Quiz Completed!</h2>
+                    <div class="score-breakdown">
+                        <div class="total-score">
+                            <span id="final-score">0</span>
+                            <p>Total Score</p>
+                        </div>
+                        <div class="score-details" id="score-details">
+                            <p>Correct Answers: <span id="correct-count">0</span></p>
+                            <p>Incorrect Answers: <span id="incorrect-count">0</span>
+                        </div>
+                    </div>
+                    <div class="result-actions">
+                        <button id="restart-btn" class="btn-restart">Restart Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>const questions = [
+            {
+                question: "What is abstraction in software development?",
+                options: [
+                    "Detailed implementation of a concept",
+                    "A definition that captures general characteristics without details",
+                    "Complete understanding of all system components",
+                    "Specific implementation of a particular solution"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is a Data Type?",
+                options: [
+                    "A specific implementation of a program",
+                    "A way to create variables",
+                    "Defines the kind of values that can be stored and operations that can be performed",
+                    "A method of organizing code"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "What is an Abstract Data Type (ADT)?",
+                options: [
+                    "A concrete implementation of a data structure",
+                    "A programmer-created data type specifying legal values and operations",
+                    "A specific programming language feature",
+                    "A method of data encryption"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the main characteristic of an Abstract Data Type?",
+                options: [
+                    "Complex implementation details",
+                    "Hiding internal structure like a black box",
+                    "Requiring detailed knowledge of implementation",
+                    "Limiting possible operations"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the key difference between procedural and object-oriented programming?",
+                options: [
+                    "Procedural focuses on functions, OOP focuses on objects",
+                    "Procedural uses more memory",
+                    "OOP is slower than procedural programming",
+                    "Procedural programming is more modern"
+                ],
+                answer: 0,
+                chapter: 7
+            },
+            {
+                question: "What is encapsulation in object-oriented programming?",
+                options: [
+                    "Separating data and functions",
+                    "Bundling data and code that operate on it into a single entity",
+                    "Creating multiple copies of an object",
+                    "Hiding all implementation details"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is data hiding?",
+                options: [
+                    "Preventing any access to data",
+                    "Restricting data access to certain members of an object",
+                    "Deleting data from memory",
+                    "Encrypting data"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is a class in C++?",
+                options: [
+                    "A specific object",
+                    "A programmer-defined data type used to define objects",
+                    "A built-in data structure",
+                    "A method of data storage"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What are access specifiers in a class?",
+                options: [
+                    "Methods to create objects",
+                    "Keywords used to control access to class members",
+                    "Ways to define class methods",
+                    "Techniques for inheritance"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the default access specifier in a class if not specified?",
+                options: [
+                    "Public",
+                    "Protected",
+                    "Private",
+                    "Static"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "What is an object in object-oriented programming?",
+                options: [
+                    "A function that performs a specific task",
+                    "An instance of a class",
+                    "A type of data structure",
+                    "A programming method"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is an accessor function?",
+                options: [
+                    "A function that modifies a member variable",
+                    "A function that retrieves a value from a private member variable",
+                    "A function that creates new objects",
+                    "A function that deletes data"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is a mutator function?",
+                options: [
+                    "A function that reads data",
+                    "A function that creates objects",
+                    "A function that stores or changes a value in a private member variable",
+                    "A function that compares values"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "What are inline functions?",
+                options: [
+                    "Functions that can only be called once",
+                    "Member functions defined inside the class declaration",
+                    "Functions that cannot be modified",
+                    "Functions with multiple parameters"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the scope resolution operator (::) used for?",
+                options: [
+                    "Creating new objects",
+                    "Defining class members outside the class declaration",
+                    "Accessing private members",
+                    "Comparing objects"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is a common convention for member variables?",
+                options: [
+                    "They are usually public",
+                    "They are usually private",
+                    "They are always static",
+                    "They are always constant"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the typical naming convention for accessor functions?",
+                options: [
+                    "Start with 'access'",
+                    "Start with 'get'",
+                    "Start with 'retrieve'",
+                    "Start with 'find'"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the typical naming convention for mutator functions?",
+                options: [
+                    "Start with 'modify'",
+                    "Start with 'change'",
+                    "Start with 'set'",
+                    "Start with 'update'"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "What happens when an inline function is called?",
+                options: [
+                    "Control passes to the function normally",
+                    "Code for the function is copied into the program in place of the call",
+                    "The function is always executed separately",
+                    "The function is cached for future use"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "How do you access members of an object?",
+                options: [
+                    "Using the arrow operator",
+                    "Using the dot operator",
+                    "Using the scope resolution operator",
+                    "Using square brackets"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is an instance of a class?",
+                options: [
+                    "The class definition",
+                    "A specific object created from a class",
+                    "A static method of the class",
+                    "A blueprint for creating objects"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What problem does object-oriented programming address?",
+                options: [
+                    "Slow processing speed",
+                    "Memory management",
+                    "Separation of code and data in complex programs",
+                    "Network communication"
+                ],
+                answer: 2,
+                chapter: 7
+            },
+            {
+                question: "What is the primary benefit of data hiding?",
+                options: [
+                    "Preventing all access to data",
+                    "Ensuring the class operates as intended",
+                    "Reducing memory usage",
+                    "Increasing processing speed"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What is the purpose of creating a class?",
+                options: [
+                    "To create a single, fixed object",
+                    "To serve as a blueprint for creating objects",
+                    "To define global variables",
+                    "To create static methods"
+                ],
+                answer: 1,
+                chapter: 7
+            },
+            {
+                question: "What does the 'const' keyword typically indicate for an accessor function?",
+                options: [
+                    "The function cannot be changed",
+                    "The function does not modify the object's data",
+                    "The function can only be called once",
+                    "The function can only return a constant value"
+                ],
+                answer: 1,
+                chapter: 7
+            }
+        ];
+    </script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
